@@ -12,8 +12,9 @@ const About = () => {
         <Row>
           <Col lg={12} className="text-center mb-5">
             <h2 className="section-title">{t('about.title')}</h2>
-            <p className="section-subtitle">{t('about.subtitle')}</p>
           </Col>
+        <p className="section-subtitle">{t('about.subtitle')}</p>
+
         </Row>
         <Row>
           <Col lg={12} className="mb-5">

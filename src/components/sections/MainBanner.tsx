@@ -6,6 +6,7 @@ import { openInNewTab } from '../../utils/helpers';
 import { getFirstName } from '../../utils/helpers';
 import SocialIcons from '../common/SocialIcons';
 import Button from '../common/Button';
+import TypeWriter from '../common/TypeWriter';
 import './MainBanner.css';
 
 const MainBanner = memo(() => {
@@ -23,10 +24,14 @@ const MainBanner = memo(() => {
       <Container>
         <Row className="align-items-center min-vh-100">
           <Col lg={6} className="hero-content">
-            <h1 className="hero-title">
-              {t('hero.greeting')} <span className="highlight">{getFirstName(personalInfo.name)}</span>
-            </h1>
+            <TypeWriter 
+              text={t('hero.greeting')}
+              highlightText={getFirstName(personalInfo.name)}
+              speed={30}
+              delay={50}
+            />
             <p className="hero-subtitle">{t('hero.title')}</p>
+            
             <p className="hero-description">{t('hero.description')}</p>
             
             <SocialIcons />
