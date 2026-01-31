@@ -25,10 +25,10 @@ export const translations: Record<Language, Record<string, string>> = {
     // Services
     'services.title': 'Servicios',
     'services.subtitle': 'Lo que ofrezco',
-    'services.backend.title': 'Desarrollo Backend',
-    'services.backend.description': 'Diseño y desarrollo de APIs REST escalables con Python (FastAPI, Django), arquitectura de microservicios, integración con bases de datos SQL y NoSQL, y despliegue en la nube con GCP.',
-    'services.fullstack.title': 'Desarrollo Fullstack',
-    'services.fullstack.description': 'Desarrollo de aplicaciones web completas desde el backend hasta el frontend, integrando React con APIs REST, implementando lógica de negocio y procesos ETL.',
+    'services.server.title': 'Desarrollo Backend',
+    'services.server.description': 'Diseño y desarrollo de APIs REST escalables con Python (FastAPI, Django), arquitectura de microservicios, integración con bases de datos SQL y NoSQL, y despliegue en la nube con GCP.',
+    'services.code.title': 'Desarrollo Fullstack',
+    'services.code.description': 'Desarrollo de aplicaciones web completas desde el backend hasta el frontend, integrando React con APIs REST, implementando lógica de negocio y procesos ETL.',
     'services.architecture.title': 'Arquitectura de Software',
     'services.architecture.description': 'Diseño de arquitecturas escalables y mantenibles, aplicación de principios SOLID, patrones de diseño y mejores prácticas en el desarrollo de software.',
     
@@ -94,10 +94,10 @@ export const translations: Record<Language, Record<string, string>> = {
     // Services
     'services.title': 'Services',
     'services.subtitle': 'What I Provide',
-    'services.backend.title': 'Backend Development',
-    'services.backend.description': 'Design and development of scalable REST APIs with Python (FastAPI, Django), microservices architecture, integration with SQL and NoSQL databases, and cloud deployment with GCP.',
-    'services.fullstack.title': 'Fullstack Development',
-    'services.fullstack.description': 'Development of complete web applications from backend to frontend, integrating React with REST APIs, implementing business logic and ETL processes.',
+    'services.server.title': 'Backend Development',
+    'services.server.description': 'Design and development of scalable REST APIs with Python (FastAPI, Django), microservices architecture, integration with SQL and NoSQL databases, and cloud deployment with GCP.',
+    'services.code.title': 'Fullstack Development',
+    'services.code.description': 'Development of complete web applications from backend to frontend, integrating React with REST APIs, implementing business logic and ETL processes.',
     'services.architecture.title': 'Software Architecture',
     'services.architecture.description': 'Design of scalable and maintainable architectures, application of SOLID principles, design patterns, and best practices in software development.',
     

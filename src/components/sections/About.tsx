@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import { technologies } from '../../data/personalData';
 import { useLanguage } from '../../context/LanguageContext';
+import TechCard from '../common/TechCard';
 import './About.css';
 
 const About = () => {
@@ -34,9 +35,7 @@ const About = () => {
         <Row>
           {technologies.map((tech, index) => (
             <Col key={index} xs={6} sm={4} md={3} lg={2} className="mb-3">
-              <div className="tech-card">
-                <span className="tech-name">{tech.name}</span>
-              </div>
+              <TechCard name={tech.name} icon={tech.icon} index={index} />
             </Col>
           ))}
         </Row>
