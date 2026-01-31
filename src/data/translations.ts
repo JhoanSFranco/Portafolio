@@ -22,16 +22,22 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.technologies.title': 'Tecnologías y Herramientas',
     'about.technologies.description': 'Utilizando una combinación de tecnologías de vanguardia y software open-source confiable, construyo aplicaciones y sitios web enfocados en el usuario, con alto rendimiento para smartphones, tablets y escritorio.',
     
-    // Services
-    'services.title': 'Servicios',
-    'services.subtitle': 'Lo que ofrezco',
-    'services.server.title': 'Desarrollo Backend',
-    'services.server.description': 'Diseño y desarrollo de APIs REST escalables con Python (FastAPI, Django), arquitectura de microservicios, integración con bases de datos SQL y NoSQL, y despliegue en la nube con GCP.',
-    'services.code.title': 'Desarrollo Fullstack',
-    'services.code.description': 'Desarrollo de aplicaciones web completas desde el backend hasta el frontend, integrando React con APIs REST, implementando lógica de negocio y procesos ETL.',
-    'services.architecture.title': 'Arquitectura de Software',
-    'services.architecture.description': 'Diseño de arquitecturas escalables y mantenibles, aplicación de principios SOLID, patrones de diseño y mejores prácticas en el desarrollo de software.',
-    
+// Services
+  'services.title': 'Servicios',
+  'services.subtitle': 'Áreas de experiencia',
+
+  'services.server.title': 'Desarrollo Backend',
+  'services.server.description':
+  'Desarrollo de soluciones backend y APIs REST, con énfasis en Python, implementación de lógica de negocio, integración con bases de datos relacionales y NoSQL, y despliegue de aplicaciones en entornos cloud.',
+
+  'services.code.title': 'Desarrollo Fullstack',
+  'services.code.description':
+  'Desarrollo de aplicaciones web, integrando backend y frontend, consumo de APIs REST y construcción de flujos funcionales para sistemas web y MVPs.',
+
+  'services.database.title': 'Bases de Datos e Integración de Sistemas',
+  'services.database.description':
+  'Diseño y gestión de modelos de datos, integración entre servicios, migración de información y automatización de procesos de procesamiento de datos.',
+
     // Projects
     'projects.title': 'Proyectos',
     'projects.subtitle': 'Lo que he construido',
@@ -93,13 +99,19 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Services
     'services.title': 'Services',
-    'services.subtitle': 'What I Provide',
+    'services.subtitle': 'Areas of expertise',
+
     'services.server.title': 'Backend Development',
-    'services.server.description': 'Design and development of scalable REST APIs with Python (FastAPI, Django), microservices architecture, integration with SQL and NoSQL databases, and cloud deployment with GCP.',
+    'services.server.description':
+      'Development of backend solutions and REST APIs, with a focus on Python, business logic implementation, integration with relational and NoSQL databases, and deployment of applications in cloud environments.',
+
     'services.code.title': 'Fullstack Development',
-    'services.code.description': 'Development of complete web applications from backend to frontend, integrating React with REST APIs, implementing business logic and ETL processes.',
-    'services.architecture.title': 'Software Architecture',
-    'services.architecture.description': 'Design of scalable and maintainable architectures, application of SOLID principles, design patterns, and best practices in software development.',
+    'services.code.description':
+      'Development of web applications, integrating backend and frontend, consumption of REST APIs, and building functional flows for web systems and MVPs.',
+
+    'services.database.title': 'Databases & Systems Integration',
+    'services.database.description':
+      'Design and management of data models, integration between services, data migration, and automation of data processing workflows.',
     
     // Projects
     'projects.title': 'Projects',

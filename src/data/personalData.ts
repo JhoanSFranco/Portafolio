@@ -65,9 +65,9 @@ export const services: Service[] = [
   },
   {
     id: 3,
-    title: 'Arquitectura de Software',
-    description: 'Diseño de arquitecturas escalables y mantenibles, aplicación de principios SOLID, patrones de diseño y mejores prácticas en el desarrollo de software.',
-    icon: 'architecture'
+    title: 'Bases de Datos e Integración',
+    description: 'Modelado y gestión de bases de datos relacionales y NoSQL, migraciones de datos, procesos ETL e integración entre servicios y APIs externas.',
+    icon: 'database'
   }
 ];
 
