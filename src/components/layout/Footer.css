@@ -1,0 +1,30 @@
+.footer-section {
+  background-color: var(--text-dark);
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  padding: 1rem 0;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heart {
+  color: #ef4444;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
