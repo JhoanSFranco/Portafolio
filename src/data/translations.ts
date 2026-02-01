@@ -22,25 +22,25 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.technologies.title': 'Tecnologías y Herramientas',
     'about.technologies.description': 'Utilizando una combinación de tecnologías de vanguardia y software open-source confiable, construyo aplicaciones y sitios web enfocados en el usuario, con alto rendimiento para smartphones, tablets y escritorio.',
     
-// Services
-  'services.title': 'Servicios',
-  'services.subtitle': 'Áreas de experiencia',
+    // Services
+    'services.title': 'Servicios',
+    'services.subtitle': 'Áreas de experiencia',
 
-  'services.server.title': 'Desarrollo Backend',
-  'services.server.description':
-  'Desarrollo de soluciones backend y APIs REST, con énfasis en Python, implementación de lógica de negocio, integración con bases de datos relacionales y NoSQL, y despliegue de aplicaciones en entornos cloud.',
+    'services.server.title': 'Desarrollo Backend',
+    'services.server.description':
+      'Desarrollo de soluciones backend y APIs REST, con énfasis en Python, implementación de lógica de negocio, integración con bases de datos relacionales y NoSQL, y despliegue de aplicaciones en entornos cloud.',
 
-  'services.code.title': 'Desarrollo Fullstack',
-  'services.code.description':
-  'Desarrollo de aplicaciones web, integrando backend y frontend, consumo de APIs REST y construcción de flujos funcionales para sistemas web y MVPs.',
+    'services.code.title': 'Desarrollo Fullstack',
+    'services.code.description':
+      'Desarrollo de aplicaciones web, integrando backend y frontend, consumo de APIs REST y construcción de flujos funcionales para sistemas web y MVPs.',
 
-  'services.database.title': 'Bases de Datos e Integración de Sistemas',
-  'services.database.description':
-  'Diseño y gestión de modelos de datos, integración entre servicios, migración de información y automatización de procesos de procesamiento de datos.',
+    'services.database.title': 'Bases de Datos e Integración de Sistemas',
+    'services.database.description':
+      'Diseño y gestión de modelos de datos, integración entre servicios, migración de información y automatización de procesos de procesamiento de datos.',
 
     // Projects
     'projects.title': 'Proyectos',
-    'projects.subtitle': 'Lo que he construido',
+    'projects.subtitle': 'Proyectos en los que he trabajado',
     'projects.readMore': 'Leer más →',
     'projects.showMore': 'Mostrar Más →',
     'projects.showLess': 'Mostrar Menos',
@@ -123,7 +123,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Projects
     'projects.title': 'Projects',
-    'projects.subtitle': 'What I Built',
+    'projects.subtitle': 'Projects I have worked on',
     'projects.readMore': 'Read more →',
     'projects.showMore': 'Show More →',
     'projects.showLess': 'Show Less',
