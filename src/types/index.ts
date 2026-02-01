@@ -3,6 +3,7 @@ export type Language = 'es' | 'en';
 export interface Project {
   id: number;
   title: string;
+  icon?: string;
   description: string;
   technologies: string[];
   link?: string;

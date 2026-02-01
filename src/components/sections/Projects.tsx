@@ -22,20 +22,12 @@ const Projects = memo(() => {
         </Row>
         <Row>
           {displayedProjects.map((project) => {
-            const translatedTitle = project.translationKey
-              ? t(`projects.${project.translationKey}.title`)
-              : undefined;
-            const translatedDescription = project.translationKey
-              ? t(`projects.${project.translationKey}.description`)
-              : undefined;
-
+            const icon = project.icon || "";
             return (
               <Col key={project.id} lg={4} md={6} className="mb-4">
                 <CardProjects
                   project={project}
-                  translatedTitle={translatedTitle}
-                  translatedDescription={translatedDescription}
-                  readMoreText={t('projects.readMore')}
+                  icon={icon}
                 />
               </Col>
             );
