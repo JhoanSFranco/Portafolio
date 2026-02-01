@@ -7,6 +7,7 @@
   font-size: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
 .custom-button:hover {

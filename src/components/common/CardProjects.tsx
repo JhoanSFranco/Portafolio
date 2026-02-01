@@ -44,7 +44,6 @@ const CardProjects = memo(({
   const description = project.translationKey
     ? t(`projects.${project.translationKey}.description`)
     : project.description;
-  const readMoreText = t('projects.readMore');
 
   return (
     <>
@@ -64,14 +63,11 @@ const CardProjects = memo(({
             {description}
           </Card.Text>
           <div className="project-technologies mb-3">
-            {project.technologies.slice(0, 4).map((tech, index) => (
+            {project.technologies.map((tech, index) => (
               <span key={index} className="tech-badge">
                 {tech}
               </span>
             ))}
-            {project.technologies.length > 4 && (
-              <span className="tech-badge">+{project.technologies.length - 4}</span>
-            )}
           </div>
           {project.link && (
             <a
@@ -80,8 +76,9 @@ const CardProjects = memo(({
               rel="noopener noreferrer"
               className="project-link"
               onClick={handleClick}
+              style={{marginLeft: '0.5rem'}}
             >
-              {readMoreText}
+              {/* Optionally keep the arrow for external link, or remove if not needed */}
             </a>
           )}
         </Card.Body>

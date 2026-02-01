@@ -9,7 +9,7 @@ import './Contact.css';
 
 const Contact = memo(() => {
   const { t } = useLanguage();
-  const { formData, handleChange, handleSubmit } = useContactForm();
+  const { formData, handleChange, handleSubmit, isSubmitting, submitStatus } = useContactForm();
 
   return (
     <section id="contact" className="contact-section section-padding">
@@ -64,6 +64,19 @@ const Contact = memo(() => {
                   required
                 />
               </Form.Group>
+              
+              {/* Mensaje de estado */}
+              {submitStatus === 'success' && (
+                <div className="alert alert-success" role="alert">
+                  {t('contact.success')}
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="alert alert-danger" role="alert">
+                  {t('contact.error')}
+                </div>
+              )}
+              
               <div className="d-flex justify-content-between align-items-center">
                 <a
                   href={`mailto:${personalInfo.email}`}
@@ -71,8 +84,14 @@ const Contact = memo(() => {
                 >
                   {t('contact.sendDirect')}
                 </a>
-                <Button type="submit" variant="primary" size="lg" className="submit-btn">
-                  {t('contact.submit')}
+                <Button 
+                  type="submit" 
+                  variant="primary" 
+                  size="lg" 
+                  className="submit-btn"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? t('contact.sending') : t('contact.submit')}
                 </Button>
               </div>
             </Form>
