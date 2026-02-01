@@ -5,7 +5,7 @@ export const personalInfo: PersonalInfo = {
   title: 'Software Engineer',
   description: 'Soy un Desarrollador Fullstack (énfasis Backend). Actualmente trabajo en Nodi como Desarrollador de Software, especializado en el diseño y desarrollo de APIs REST con Python (FastAPI, Django REST Framework), bases de datos SQL y NoSQL y arquitectura de microservicios.',
   location: 'Bogotá, Colombia',
-  email: 'jhfrancor@unal.edu.co',
+  email: 'https://mail.google.com/mail/?view=cm&to=jhfrancor@unal.edu.co',
   phone: '+57 305-474-1424',
   linkedin: 'https://www.linkedin.com/in/jhoan-sebastián-franco-46954b28a/',
   github: 'https://github.com/JhoanSFranco',
