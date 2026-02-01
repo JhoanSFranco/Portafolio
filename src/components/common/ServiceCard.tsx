@@ -9,7 +9,7 @@ interface ServiceCardProps {
   id: number;
 }
 
-const ServiceCard = memo(({ icon, id }: ServiceCardProps) => {
+const ServiceCard = memo(({ icon }: ServiceCardProps) => {
   const { ref, isInView } = useInView<HTMLDivElement>(0.1);
   const { t } = useLanguage();
 

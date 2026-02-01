@@ -20,7 +20,7 @@ if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_TEMPLATE_AUTORESPONS
  * Custom hook to manage contact form
  */
 export const useContactForm = () => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',

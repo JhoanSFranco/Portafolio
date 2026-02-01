@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react';
+import { memo } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { projects } from '../../data/personalData';
 import { useLanguage } from '../../context/LanguageContext';

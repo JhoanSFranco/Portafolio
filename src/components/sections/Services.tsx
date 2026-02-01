@@ -2,7 +2,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { services } from '../../data/personalData';
 import { useLanguage } from '../../context/LanguageContext';
 import ServiceCard from '../common/ServiceCard';
-import {useInView} from '../../hooks/useInView';
 import './Services.css';
 
 const Services = () => {
