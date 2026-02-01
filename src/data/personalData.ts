@@ -47,9 +47,11 @@ export const technologies: Technology[] = [
   { name: 'Docker', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
   { name: 'Git', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
   { name: 'Google Cloud Platform', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
+  { name: 'firebase', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg"},
   { name: 'Arduino', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" },
   { name: 'GitHub', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
-  
+  { name: 'Selenium', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" },
+
 ];
 
 export const services: Service[] = [
@@ -78,8 +80,8 @@ export const projects: Project[] = [
     id: 1,
     title: 'Sistema de Reclutamiento - Nodi',
     icon: "/assets/images/imagen_proyecto_nodi.png",
-    description: 'Desarrollo de APIs REST escalables con Python y FastAPI para un sistema de reclutamiento. Trabajo con bases de datos PostgreSQL, MongoDB, MySQL y Cassandra. Implementación de lógica de negocio, procesos ETL y migración de bases de datos.',
-    technologies: ['Python', 'FastAPI', 'PostgreSQL', 'MongoDB', 'MySQL', 'Cassandra', 'Docker', 'GCP'],
+    description: 'Desarrollo de APIs REST escalables con Python y FastAPI para un sistema de reclutamiento. Trabajo con bases de datos PostgreSQL, MongoDB, MySQL y Cassandra. Implementación de lógica de negocio, procesos ETL , migración de bases de datos y desarrollo e integracion frontend con React y Node.js.',
+    technologies: ['Python', 'FastAPI', 'REST','PostgreSQL', 'PostgresSQL', 'Cassandra', 'Index Databases', 'React + TypeScript','Docker', 'Supabase', 'GCP services', 'ETL', 'AI integration', 'Firebase Auth', ],
     link: '#',
     translationKey: 'nodi'
   },
@@ -88,7 +90,7 @@ export const projects: Project[] = [
     title: 'Proyecto Leroi',
     icon: "/assets/images/imagen_proyecto_leroi.png",
     description: 'Diseño e implementación de microservicios REST para un sistema de rutas de aprendizaje. Integración con frontend web y despliegue en Google Cloud Platform (GCP), con uso de APIs de IA.',
-    technologies: ['Python', 'FastAPI', 'React', 'GCP', 'Docker', 'Microservicios'],
+    technologies: ['Python', 'FastAPI', 'React + TypeScript', 'GCP', 'Docker', 'Microservices', 'APIs AI', 'REST', 'PostgreSQL', 'MongoDB', 'Firebase', 'Jmeter'],
     link: '#',
     translationKey: 'leroi'
   },
@@ -97,7 +99,7 @@ export const projects: Project[] = [
     title: 'Sistema de Gestión Académica (SGA)',
     icon: "/assets/images/imagen_proyecto_sga.png",
     description: 'Desarrollo de un MVP de sistema de gestión académica para el Colegio Josué Manrique, aplicando la arquitectura SOFEA. Backend con Python y FastAPI, PostgreSQL y MongoDB, APIs REST y despliegue con Docker; frontend en React.',
-    technologies: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'MongoDB', 'Docker'],
+    technologies: ['Python', 'FastAPI', "REST", 'React + TypeScript', 'PostgreSQL', 'MongoDB','Docker','JS','HTML','CSS', 'Selenium', 'Grafana', 'Prometheus'],
     link: '#',
     translationKey: 'sga'
   },
@@ -106,7 +108,7 @@ export const projects: Project[] = [
     title: 'Proyectos IoT',
     icon: "/assets/images/imagen_proyecto_IOT.png",
     description: 'Desarrollo de soluciones IoT con Python, C++ y Arduino, integrando sensores, actuadores y sistemas embebidos para aplicaciones prácticas.',
-    technologies: ['Python', 'C++', 'Arduino', 'IoT'],
+    technologies: ['Python', 'C++', 'Arduino', 'IoT', 'Embedded Systems', 'Sensors', 'Actuators'],
     link: '#',
     translationKey: 'iot'
   },
@@ -115,7 +117,7 @@ export const projects: Project[] = [
     title: 'Proyecto Zenun',
     icon: "/assets/images/imagen_proyecto_ZENUN.png",
     description: 'Desarrollo de un prototipo para la gestión de préstamos estudiantiles y eventos. Desarrollado con Django REST Framework, APIs REST y lógica de negocio integrada con frontend.',
-    technologies: ['Python', 'Django', 'Django REST Framework', 'React'],
+    technologies: ['CSS','HTML', 'JS','Python', 'MySQL', 'MongoDB', 'Django', 'Django REST Framework'],
     link: '#',
     translationKey: 'zenun'
   }
