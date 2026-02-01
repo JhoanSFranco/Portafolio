@@ -9,8 +9,8 @@ export const personalInfo: PersonalInfo = {
   phone: '+57 305-474-1424',
   linkedin: 'https://www.linkedin.com/in/jhoan-sebastián-franco-46954b28a/',
   github: 'https://github.com/JhoanSFranco',
-  resume_spanish: 'public\\assets\\resumes\\CV_JHOAN_SEBASTIAN_FRANCO_SPANISH.pdf',
-  resume_english: 'public\\assets\\resumes\\CV_JHOAN_SEBASTIAN_FRANCO_ENGLISH.pdf',
+  resume_spanish: '/assets/resumes/CV_JHOAN_SEBASTIAN_FRANCO_SPANISH.pdf',
+  resume_english: '/assets/resumes/CV_JHOAN_SEBASTIAN_FRANCO_ENGLISH.pdf',
 };
 
 export const socialLinks: SocialLink[] = [
