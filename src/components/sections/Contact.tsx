@@ -79,7 +79,7 @@ const Contact = memo(() => {
               
               <div className="d-flex justify-content-between align-items-center">
                 <a
-                  href={`${personalInfo.email}`}
+                  href={`https://mail.google.com/mail/?view=cm&to=${personalInfo.email}`}
                   className="direct-email-link"
                 >
                   {t('contact.sendDirect')}
@@ -99,7 +99,7 @@ const Contact = memo(() => {
           <Col lg={6} className="contact-info">
             <div className="info-item mb-4">
               <h5 className="info-label">{t('contact.emailLabel')}</h5>
-              <a href={`${personalInfo.email}`} className="info-value">
+              <a href={`https://mail.google.com/mail/?view=cm&to=${personalInfo.email}`} className="info-value">
                 {personalInfo.email}
               </a>
             </div>
