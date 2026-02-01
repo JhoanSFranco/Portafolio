@@ -50,7 +50,7 @@ const MainBanner = memo(() => {
             <div className="illustration-container">
               <img
                 // src="public\assets\images\Fondo_minimalista_sin_Fondo.png"
-                src="public\assets\images\imagen_jhoan_sin_fondo.png"
+                src="/assets/images/imagen_jhoan_sin_fondo.png"
                 alt="Hero Illustration"
                 style={{ maxWidth: '100%', height: 'auto' }}
               />

@@ -113,7 +113,7 @@ export const projects: Project[] = [
   {
     id: 5,
     title: 'Proyecto Zenun',
-    icon: "/assets/images/imagen_proyecto_ZENUN.JPEG",
+    icon: "/assets/images/imagen_proyecto_ZENUN.png",
     description: 'Desarrollo de un prototipo para la gestión de préstamos estudiantiles y eventos. Desarrollado con Django REST Framework, APIs REST y lógica de negocio integrada con frontend.',
     technologies: ['Python', 'Django', 'Django REST Framework', 'React'],
     link: '#',
