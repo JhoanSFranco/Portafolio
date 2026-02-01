@@ -38,6 +38,7 @@ export interface PersonalInfo {
   phone: string;
   linkedin: string;
   github: string;
-  resume: string;
+  resume_spanish: string;
+  resume_english: string;
 }
 

@@ -10,7 +10,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = memo(({ isOpen, onClose }: MobileMenuProps) => {
-  const { t } = useLanguage();
+  const { t, language, toggleLanguage } = useLanguage();
   const { handleNavClick } = useSmoothScroll();
 
   const handleItemClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -59,6 +59,15 @@ const MobileMenu = memo(({ isOpen, onClose }: MobileMenuProps) => {
               </a>
             </li>
           ))}
+          <li className="mobile-menu-item">
+            <button
+              onClick={() => { toggleLanguage(); onClose(); }}
+              className="mobile-menu-link language-toggle-btn"
+              aria-label="Toggle language"
+            >
+              {language === 'es' ? 'EN' : 'ES'}
+            </button>
+          </li>
         </ul>
       </nav>
     </>

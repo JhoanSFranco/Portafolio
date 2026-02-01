@@ -3,11 +3,11 @@ import { Language } from '../types';
 export const translations: Record<Language, Record<string, string>> = {
   es: {
     // Navigation
-    'nav.home': 'Home',
-    'nav.about': 'About',
-    'nav.services': 'Services',
-    'nav.projects': 'Projects',
-    'nav.contact': 'Contact',
+    'nav.home': 'Inicio',
+    'nav.about': 'Sobre mí',
+    'nav.services': 'Servicios',
+    'nav.projects': 'Proyectos',
+    'nav.contact': 'Contacto',
     
     // Hero
     'hero.greeting': 'Hola, soy',

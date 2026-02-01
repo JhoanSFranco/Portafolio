@@ -7,9 +7,10 @@ export const personalInfo: PersonalInfo = {
   location: 'Bogotá, Colombia',
   email: 'jhfrancor@unal.edu.co',
   phone: '+57 305-474-1424',
-  linkedin: 'https://linkedin.com/in/jhoan-sebastián-franco',
+  linkedin: 'https://www.linkedin.com/in/jhoan-sebastián-franco-46954b28a/',
   github: 'https://github.com/JhoanSFranco',
-  resume: '/CV_JHOAN_SEBASTIAN_FRANCO.pdf'
+  resume_spanish: 'public\\assets\\resumes\\CV_JHOAN_SEBASTIAN_FRANCO_SPANISH.pdf',
+  resume_english: 'public\\assets\\resumes\\CV_JHOAN_SEBASTIAN_FRANCO_ENGLISH.pdf',
 };
 
 export const socialLinks: SocialLink[] = [
@@ -93,7 +94,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: 'Sistema de Gestión Académica (SGA)',
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    icon: "public/assets/images/imagen_proyecto_sga.png",
     description: 'Desarrollo de un MVP de sistema de gestión académica para el Colegio Josué Manrique, aplicando la arquitectura SOFEA. Backend con Python y FastAPI, PostgreSQL y MongoDB, APIs REST y despliegue con Docker; frontend en React.',
     technologies: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'MongoDB', 'Docker'],
     link: '#',
@@ -102,7 +103,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: 'Proyectos IoT',
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    icon: "public/assets/images/imagen_proyecto_IOT.png",
     description: 'Desarrollo de soluciones IoT con Python, C++ y Arduino, integrando sensores, actuadores y sistemas embebidos para aplicaciones prácticas.',
     technologies: ['Python', 'C++', 'Arduino', 'IoT'],
     link: '#',
@@ -111,7 +112,7 @@ export const projects: Project[] = [
   {
     id: 5,
     title: 'Proyecto Zenun',
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    icon: "public/assets/images/imagen_proyecto_ZENUN.JPEG",
     description: 'Desarrollo de un prototipo para la gestión de préstamos estudiantiles y eventos. Desarrollado con Django REST Framework, APIs REST y lógica de negocio integrada con frontend.',
     technologies: ['Python', 'Django', 'Django REST Framework', 'React'],
     link: '#',

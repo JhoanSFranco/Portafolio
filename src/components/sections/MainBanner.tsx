@@ -10,11 +10,12 @@ import TypeWriter from '../common/TypeWriter';
 import './MainBanner.css';
 
 const MainBanner = memo(() => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const handleResumeClick = useCallback(() => {
-    openInNewTab(personalInfo.resume);
-  }, []);
+    const resumeUrl = language === 'es' ? personalInfo.resume_spanish : personalInfo.resume_english;
+    openInNewTab(resumeUrl);
+  }, [language]);
 
   return (
     <section id="home" className="hero-section">
