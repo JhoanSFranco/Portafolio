@@ -77,7 +77,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: 'Sistema de Reclutamiento - Nodi',
-    icon: "public/assets/images/imagen_proyecto_nodi.png",
+    icon: "/assets/images/imagen_proyecto_nodi.png",
     description: 'Desarrollo de APIs REST escalables con Python y FastAPI para un sistema de reclutamiento. Trabajo con bases de datos PostgreSQL, MongoDB, MySQL y Cassandra. Implementación de lógica de negocio, procesos ETL y migración de bases de datos.',
     technologies: ['Python', 'FastAPI', 'PostgreSQL', 'MongoDB', 'MySQL', 'Cassandra', 'Docker', 'GCP'],
     link: '#',
@@ -86,7 +86,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: 'Proyecto Leroi',
-    icon: "public/assets/images/imagen_proyecto_leroi.png",
+    icon: "/assets/images/imagen_proyecto_leroi.png",
     description: 'Diseño e implementación de microservicios REST para un sistema de rutas de aprendizaje. Integración con frontend web y despliegue en Google Cloud Platform (GCP), con uso de APIs de IA.',
     technologies: ['Python', 'FastAPI', 'React', 'GCP', 'Docker', 'Microservicios'],
     link: '#',
@@ -95,7 +95,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: 'Sistema de Gestión Académica (SGA)',
-    icon: "public/assets/images/imagen_proyecto_sga.png",
+    icon: "/assets/images/imagen_proyecto_sga.png",
     description: 'Desarrollo de un MVP de sistema de gestión académica para el Colegio Josué Manrique, aplicando la arquitectura SOFEA. Backend con Python y FastAPI, PostgreSQL y MongoDB, APIs REST y despliegue con Docker; frontend en React.',
     technologies: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'MongoDB', 'Docker'],
     link: '#',
@@ -104,7 +104,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: 'Proyectos IoT',
-    icon: "public/assets/images/imagen_proyecto_IOT.png",
+    icon: "/assets/images/imagen_proyecto_IOT.png",
     description: 'Desarrollo de soluciones IoT con Python, C++ y Arduino, integrando sensores, actuadores y sistemas embebidos para aplicaciones prácticas.',
     technologies: ['Python', 'C++', 'Arduino', 'IoT'],
     link: '#',
@@ -113,7 +113,7 @@ export const projects: Project[] = [
   {
     id: 5,
     title: 'Proyecto Zenun',
-    icon: "public/assets/images/imagen_proyecto_ZENUN.JPEG",
+    icon: "/assets/images/imagen_proyecto_ZENUN.JPEG",
     description: 'Desarrollo de un prototipo para la gestión de préstamos estudiantiles y eventos. Desarrollado con Django REST Framework, APIs REST y lógica de negocio integrada con frontend.',
     technologies: ['Python', 'Django', 'Django REST Framework', 'React'],
     link: '#',
