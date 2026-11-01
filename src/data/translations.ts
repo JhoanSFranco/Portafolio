@@ -12,7 +12,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.greeting': 'Hola, soy',
     'hero.title': 'Software Engineer',
-    'hero.description': 'Soy un Desarrollador Fullstack (énfasis Backend), especializado en el diseño y desarrollo de APIs REST con Python (FastAPI, Django REST Framework), bases de datos SQL y NoSQL y arquitectura de microservicios.',
+     'hero.description': 'Desarrollador Software Fullstack con énfasis en Backend e Arquitecturas Distribuidas. Especializado en el diseño de APIs REST, servicios Cloud, sistemas event-driven (CDC, Apache/Flink) e integración de IA. Enfocado en construir software escalable, fiable y de alto rendimiento.',
     'hero.resume': 'Ver CV',
     
     // About
@@ -42,6 +42,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'projects.title': 'Proyectos',
     'projects.subtitle': 'Proyectos en los que he trabajado',
     'projects.readMore': 'Leer más →',
+    'projects.viewDetails': 'Ver detalles',
     'projects.showMore': 'Mostrar Más →',
     'projects.showLess': 'Mostrar Menos',
     'projects.nodi.title': 'Sistema de Reclutamiento - Nodi',
@@ -95,13 +96,13 @@ export const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.greeting': 'Hi, I am',
     'hero.title': 'Software Engineer',
-    'hero.description': 'I am a Fullstack Developer (Backend focus), specialized in designing and developing REST APIs with Python (FastAPI, Django REST Framework), SQL and NoSQL databases, and microservices architecture.',
+    'hero.description': 'Fullstack Software Developer focused on Backend and Distributed Architectures. Specialized in REST API design, Cloud services, event-driven systems (CDC, Apache/Flink), and AI integration. Focused on building scalable, reliable, and high-performance software.',
     'hero.resume': 'View Resume',
     
     // About
     'about.title': 'About Me',
     'about.subtitle': 'A bit about me',
-    'about.description': 'I am a Systems and Computing Engineering student at Universidad Nacional de Colombia with experience as a Fullstack Developer (Backend focus) at a startup. Specialized in designing and developing REST APIs with Python (FastAPI, Flask, Django REST Framework), SQL and NoSQL databases, and microservices architecture. Experience in deployment on Google Cloud Platform, Docker usage, and frontend integration with React. Interest in backend, distributed systems, and software architecture.',
+    'about.description': 'I am pursuing a double engineering degree at IMT Atlantique (France), following a Master’s degree program, and Universidad Nacional de Colombia. As a Software Engineer, I have professional experience building scalable applications using Java (Spring Boot), Python (FastAPI), and React. My expertise spans REST API design, microservices architectures (SOFEA, Hexagonal), using cloud platforms like Google Cloud Platform and AWS. I am deeply focused on distributed systems, application reliability, and real-time data engineering in CDC architectures.',
     'about.technologies.title': 'Technologies and Tools',
     'about.technologies.description': 'Using a combination of cutting-edge technologies and reliable open-source software, I build user-focused, high-performance applications and websites for smartphones, tablets, and desktops.',
     
@@ -110,26 +111,25 @@ export const translations: Record<Language, Record<string, string>> = {
     'services.subtitle': 'Areas of expertise',
 
     'services.server.title': 'Backend Development',
-    'services.server.description':
-      'Development of backend solutions and REST APIs, with a focus on Python, business logic implementation, integration with relational and NoSQL databases, and deployment of applications in cloud environments.',
+    'services.server.description': 'Development of robust backend solutions and REST APIs using Java (Spring Boot) and Python (FastAPI). Focus on implementing scalable business logic, microservices architectures, and cloud-native application deployment.',
 
     'services.code.title': 'Fullstack Development',
     'services.code.description':
-      'Development of web applications, integrating backend and frontend, consumption of REST APIs, and building functional flows for web systems and MVPs.',
-
+      'End-to-end web application development from backend architecture to frontend execution. Focused on building responsive interfaces, integrating RESTful services, and delivering production-ready MVPs.',
     'services.database.title': 'Databases & Systems Integration',
     'services.database.description':
-      'Design and management of data models, integration between services, data migration, and automation of data processing workflows.',
+      'Design of data models, ETL/ELT pipelines, and real-time event-driven architectures. Experience with Change Data Capture (CDC), database migrations, and automating complex data processing workflows',
     
     // Projects
     'projects.title': 'Projects',
     'projects.subtitle': 'Projects I have worked on',
     'projects.readMore': 'Read more →',
+    'projects.viewDetails': 'View Details',
     'projects.showMore': 'Show More →',
     'projects.showLess': 'Show Less',
     'projects.nodi.title': 'Recruitment System - Nodi',
       'projects.nodi.description': 'Development of scalable REST APIs with Python and FastAPI for a recruitment system. Working with PostgreSQL, MongoDB, MySQL, and Cassandra databases. Implementation of business logic, ETL processes, database migration, and integration of AI services. Also developed and integrated frontend features using React for seamless user experience.',
-    'projects.leroi.title': 'Leroi Project',
+      'projects.leroi.title': 'Leroi Project',
       'projects.leroi.description': 'Design and implementation of REST microservices for a learning paths system, applying software architecture principles. Integration with web frontend and deployment on Google Cloud Platform (GCP), with AI API usage.',
     'projects.sga.title': 'Academic Management System (SGA)',
       'projects.sga.description': 'Development of an MVP academic management system for Colegio Josué Manrique, applying SOFEA architecture. Backend with Python and FastAPI, PostgreSQL and MongoDB, REST APIs and Docker deployment; frontend developed and integrated with React and Bootstrap.',
@@ -168,4 +168,3 @@ export const translations: Record<Language, Record<string, string>> = {
     'footer.by': 'by Jhoan Sebastián Franco',
   },
 };
-

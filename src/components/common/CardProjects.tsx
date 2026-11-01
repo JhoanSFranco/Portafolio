@@ -1,8 +1,10 @@
 import { memo, useState } from 'react';
 import { Card } from 'react-bootstrap';
+import { Button }  from 'react-bootstrap';
 import { Project } from '../../types';
 import { openInNewTab } from '../../utils/helpers';
 import { useLanguage } from '../../context/LanguageContext';
+import { useNavigate } from 'react-router-dom';
 import './CardProjects.css';
 
 interface CardProjectsProps {
@@ -18,6 +20,11 @@ const CardProjects = memo(({
   const { t } = useLanguage();
   const [showModal, setShowModal] = useState(false);
 
+  const navigate = useNavigate();
+
+  const handleViewDetailsProject = () => {
+    navigate(`/projects/${project.translationKey}`);
+  }
   const handleClick = () => {
     if (project.link) {
       openInNewTab(project.link);
@@ -52,7 +59,7 @@ const CardProjects = memo(({
           <Card.Title className="project-title">
             {title}
           </Card.Title>
-          {/* ICON */}
+          {/* Image project */}
           {icon && (
             <div className="project-icon" onClick={handleImageClick} style={{cursor:'zoom-in'}}>
               <img src={icon} alt={`${project.title} icon`} />
@@ -69,6 +76,14 @@ const CardProjects = memo(({
               </span>
             ))}
           </div>
+          {/* Button for navigation */}
+          <Button
+            variant="primary"
+            className="mt-3"
+            onClick={handleViewDetailsProject}
+          >
+            {t('projects.viewDetails') as string}
+          </Button>
           {project.link && (
             <a
               href={project.link}
@@ -96,4 +111,3 @@ const CardProjects = memo(({
 CardProjects.displayName = 'CardProjects';
 
 export default CardProjects;
-

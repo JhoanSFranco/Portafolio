@@ -24,7 +24,7 @@ interface LanguageProviderProps {
 
 // LanguageProvider component to wrap the app and provide language context
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  const [language, setLanguage] = useState<Language>('es');
+  const [language, setLanguage] = useState<Language>('en');
 
   const toggleLanguage = useCallback(() => {
     setLanguage((prev) => (prev === 'es' ? 'en' : 'es'));

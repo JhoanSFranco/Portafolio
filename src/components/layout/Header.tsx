@@ -1,5 +1,7 @@
 import { memo, useState, useEffect } from 'react';
-import { Navbar, Container, Button } from 'react-bootstrap';
+import { Navbar} from 'react-bootstrap';
+import Container from '../common/Container';
+import Button  from '../common/Button';
 import { useLanguage } from '../../context/LanguageContext';
 import { useScroll } from '../../hooks/useScroll';
 import Navigation from './Navigation';
@@ -32,7 +34,7 @@ const Header = memo(() => {
       <Container>
 
         <Navbar.Brand href="#home" className="brand-logo">
-          &lt;JSF/&gt;
+          &lt;Jhoan Franco/&gt;
         </Navbar.Brand>
 
         <Navbar.Toggle

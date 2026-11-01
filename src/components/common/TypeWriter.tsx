@@ -24,6 +24,12 @@ const TypeWriter = memo(({
   const fullText = highlightText ? `${text} ${highlightText}` : text;
 
   useEffect(() => {
+    setDisplayedText('');
+    setCurrentIndex(0);
+    setIsComplete(false);
+  }, [fullText]);
+
+  useEffect(() => {
     // Delay before starting
     const startTimeout = setTimeout(() => {
       if (currentIndex < fullText.length) {

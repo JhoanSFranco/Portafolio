@@ -2,12 +2,17 @@
   --primary-color: rgb(59 130 246);
   --secondary-color: #324c65;
   --tertiary-color: #6b6b6b;
-  --fourth-color:  #E6615E;
+  --fourth-color:  #f36664;
   --text-dark: #232d35;
   --text-light: #656c78;
   --text-lightest: #f0f0f0;
   --bg-light: #f8fafc;
   --bg-white: #ffffff;
+  --bg-blue-dark: rgba(13, 110, 253, 0.08);
+  --bg-blue-clair: #bae6fd;
+  --bg-dark: #1f2937;
+  --bg-clair: #e0f2fe;
+  --bg-light-dark: #7092c9;
   --border-color: #e5e7eb;
   --border-color-dark: #7092c9;
 }

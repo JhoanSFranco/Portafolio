@@ -8,6 +8,7 @@ import SocialIcons from '../common/SocialIcons';
 import Button from '../common/Button';
 import TypeWriter from '../common/TypeWriter';
 import './MainBanner.css';
+import StarsBackground from '../layout/startsBackground';
 
 const MainBanner = memo(() => {
   const { t, language } = useLanguage();
@@ -22,6 +23,7 @@ const MainBanner = memo(() => {
       <div className="hero-background">
         <div className="clouds"></div>
       </div>
+      <StarsBackground />
       <Container>
         <Row className="align-items-center min-vh-100">
           <Col lg={6} className="hero-content">
@@ -38,7 +40,7 @@ const MainBanner = memo(() => {
             <SocialIcons />
 
             <Button
-              variant="primary"
+              variant="secondary"
               size="lg"
               className="resume-btn mt-4"
               onClick={handleResumeClick}

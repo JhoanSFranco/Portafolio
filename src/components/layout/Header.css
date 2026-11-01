@@ -14,7 +14,7 @@
 .brand-logo {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   font-weight: 700;
-  color: var(--text-dark) !important;
+  color: var(--text-dark) ;
   text-decoration: none;
   font-family: 'Courier New', monospace;
 }
@@ -37,7 +37,7 @@
   border-radius: 0.375rem;
   transition: all 0.3s ease;
   min-width: 3.125rem;
-  margin-left: 0.5rem !important;
+  margin-left: 0.5rem ;
 }
 
 .language-btn.ms-2:hover {
@@ -65,18 +65,18 @@
 
   .language-btn.ms-2 {
     position: static;
-    margin: 0.5rem auto 0 auto !important;
+    margin: 0.5rem auto 0 auto ;
     padding: 0.5rem 1.5rem;
     font-size: clamp(0.875rem, 2vw, 1rem);
     min-width: 4rem;
     max-width: 6rem;
     background-color: var(--primary-color);
-    color: white !important;
+    color: white ;
     border-color: var(--primary-color);
   }
 
   .language-btn.ms-2:hover {
-    color: white !important;
+    color: white ;
     transform: scale(1.05);
   }
 }
@@ -88,23 +88,42 @@
 
 /* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
-  border: none;
-  padding: 0.5rem;
-  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 0.65rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  outline: none ;
+}
+
+.mobile-menu-toggle:hover {
+  background: var(--bg-light-dark); ;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--border-color-dark);
+}
+
+.mobile-menu-toggle:active {
+  transform: scale(0.95);
 }
 
 .mobile-menu-toggle:focus {
-  box-shadow: none;
+  outline: none ;
 }
 
+
+/* Darker, crisp hamburger icon lines */
 .mobile-menu-toggle .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  width: 1.25em;
+  height: 1.25em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2815, 23, 42, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") ;
 }
 
 /* Mobile adjustments */
 @media (max-width: 991px) {
   .desktop-nav {
-    display: none !important;
+    display: none ;
   }
 
   .custom-navbar {

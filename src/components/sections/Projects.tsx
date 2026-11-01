@@ -37,7 +37,7 @@ const Projects = memo(() => {
           <Row>
             <Col lg={12} className="text-center mt-4">
               <Button
-                variant="primary"
+                variant="outline-primary"
                 size="lg"
                 onClick={toggleShowAll}
                 className="show-more-btn"

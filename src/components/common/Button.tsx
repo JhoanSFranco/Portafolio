@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { Button as BootstrapButton, ButtonProps } from 'react-bootstrap';
 import './Button.css';
 
-interface CustomButtonProps extends ButtonProps {
+interface CustomButtonProps extends Omit<ButtonProps, 'variant' | 'size'> {
   variant?: 'primary' | 'secondary' | 'outline-primary' | 'outline-secondary';
   size?: 'sm' | 'lg';
   children: React.ReactNode;
@@ -21,7 +21,7 @@ const Button = memo(({
       variant={variant}
       size={size}
       className={`custom-button ${className}`}
-      {...props}
+      {...props as any}
     >
       {children}
     </BootstrapButton>

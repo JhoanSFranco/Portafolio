@@ -38,14 +38,14 @@
 
 .tech-card:hover {
   box-shadow: 0 8px 32px rgba(59,130,246,0.18), 0 2px 8px rgba(0,0,0,0.08);
-  background: linear-gradient(120deg, #e0f2fe 0%, #bae6fd 100%);
+  background: linear-gradient(120deg, var(--bg-clair) 0%, var(--bg-blue-clair) 100%);
   transform: translateY(-8px) scale(1.04);
   transition: box-shadow 0.3s, background 0.3s, transform 0.3s;
 }
 
 .tech-icon {
-  width: 44px;
-  height: 44px;
+  width: 22px;
+  height: 22px;
   margin-bottom: 0.7rem;
   display: flex;
   align-items: center;
