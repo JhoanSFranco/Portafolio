@@ -11,6 +11,25 @@ export interface Project {
   translationKey?: string;
 }
 
+export interface ProjectDetail {
+  id: number;
+  translationKey: string;
+  title: string;
+  subtitle: string;
+  period: string;
+  role: string;
+  team?: string;
+  status: 'completed' | 'in-progress';
+  context: string;
+  responsibilities: string[];
+  results: string[];
+  architecture?: string;
+  techGroups: { label: string; items: string[] }[];
+  skills: string[];
+  links?: { github?: string; article?: string; demo?: string };
+}
+
+
 export interface Service {
   id: number;
   title: string;

@@ -28,6 +28,55 @@
   margin-bottom: 1rem;
 }
 
+.project-detail-subtitle {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-detail-meta {
+  border-left: 3px solid var(--primary-color);
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.project-detail-meta p {
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.project-detail-context {
+  color: var(--text-dark);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.project-detail-section {
+  margin-top: 2rem;
+}
+
+.project-detail-list {
+  color: var(--text-dark);
+  line-height: 1.8;
+  padding-left: 1.25rem;
+}
+
+.project-detail-list li {
+  margin-bottom: 0.65rem;
+}
+
+.project-detail-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.project-detail-links a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
 /* ===== Image ===== */
 .project-detail-img {
   width: 100%;
