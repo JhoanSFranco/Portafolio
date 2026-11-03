@@ -35,7 +35,7 @@ const Projects = memo(() => {
         </Row>
         {hasMoreProjects && (
           <Row>
-            <Col lg={12} className="text-center mt-4">
+            <Col lg={12} className="text-center mt-6">
               <Button
                 variant="outline-primary"
                 size="lg"

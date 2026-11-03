@@ -12,6 +12,18 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
 .project-title {
   font-size: 1.3rem;
   font-weight: 600;
@@ -125,4 +137,3 @@
 .close-modal:hover {
   color: var(--primary-color);
 }
-

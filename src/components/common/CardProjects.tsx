@@ -55,7 +55,7 @@ const CardProjects = memo(({
   return (
     <>
       <Card className="project-card h-100">
-        <Card.Body>
+        <Card.Body className="project-card-body">
           <Card.Title className="project-title">
             {title}
           </Card.Title>
@@ -77,13 +77,14 @@ const CardProjects = memo(({
             ))}
           </div>
           {/* Button for navigation */}
-          <Button
-            variant="primary"
-            className="mt-3"
-            onClick={handleViewDetailsProject}
-          >
-            {t('projects.viewDetails') as string}
-          </Button>
+          <div className="project-actions">
+            <Button
+              variant="primary"
+              onClick={handleViewDetailsProject}
+            >
+              {t('projects.viewDetails') as string}
+            </Button>
+          </div>
           {project.link && (
             <a
               href={project.link}
