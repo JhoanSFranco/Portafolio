@@ -49,14 +49,16 @@ const ProjectDetails = () => {
         <h1 className="mt-2 mb-4">{title}</h1>
         <p className="project-detail-subtitle">{projectDetail.subtitle}</p>
 
-        <Row className="g-4">
-            <Col md={7}>
-            {project.icon && (
-                <img src={project.icon} alt={title} className="project-detail-img" />
-            )}
+        <Row className="project-detail-overview g-5 align-items-stretch">
+            <Col lg={6}>
+            <div className="project-detail-media">
+                {project.icon && (
+                    <img src={project.icon} alt={title} className="project-detail-img" />
+                )}
+            </div>
             </Col>
 
-            <Col md={5}>
+            <Col lg={6}>
             <div className="project-detail-meta">
                 <p><strong>{t('projects.period')}:</strong> {projectDetail.period}</p>
                 <p><strong>{t('projects.role')}:</strong> {projectDetail.role}</p>
@@ -84,18 +86,22 @@ const ProjectDetails = () => {
             </Col>
         </Row>
 
-        <Row className="g-4 mt-2">
-            <Col md={6}>
+        <Row className="project-detail-panels g-4">
+            <Col lg={6}>
+                <div className="project-detail-panel">
                 <h5>{t('projects.responsibilities')}</h5>
                 <ul className="project-detail-list">
                     {projectDetail.responsibilities.map((item) => <li key={item}>{item}</li>)}
                 </ul>
+                </div>
             </Col>
-            <Col md={6}>
+            <Col lg={6}>
+                <div className="project-detail-panel">
                 <h5>{t('projects.results')}</h5>
                 <ul className="project-detail-list">
                     {projectDetail.results.map((item) => <li key={item}>{item}</li>)}
                 </ul>
+                </div>
             </Col>
         </Row>
 
