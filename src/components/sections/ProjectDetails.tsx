@@ -1,13 +1,15 @@
 import { useEffect } from 'react';
-import { useParams , Link} from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import { projectDetails, projects } from '../../data/personalData';
 import { Container, Row, Col } from 'react-bootstrap';
+import Button from '../common/Button';
 import './ProjectDetails.css';
 
 const ProjectDetails = () => {
     const { translationKey } = useParams<{ translationKey: string }>();
     const { t } = useLanguage();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -17,6 +19,12 @@ const ProjectDetails = () => {
     const projectDetail = projectDetails.find(
         (p) => p.translationKey === translationKey
     );
+
+    let nextProjectIndex = projects.findIndex((p) => p.translationKey === translationKey) + 1;
+    if (nextProjectIndex >= projects.length) {
+        nextProjectIndex = 0; // Loop back to the first project if at the end
+    }
+    const nextProject = projects[nextProjectIndex];
 
     // Call back if there is not a project
     if (!project || !projectDetail) {
@@ -130,6 +138,15 @@ const ProjectDetails = () => {
                 ))}
             </div>
         )}
+
+        <div className="next-project-link mt-5">
+            <Button
+                variant="outline-secondary"
+                onClick={() => navigate(`/projects/${nextProject.translationKey}`)}
+            >
+                {t('projects.nextProject')} → {t(`projects.${nextProject.translationKey}.title`)}
+            </Button>
+        </div>
     </Container>
   );
 };
