@@ -94,8 +94,20 @@
 }
 
 .illustration-container {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  max-width: 500px;
+}
+
+.hero-photo {
+  width: 400px;
+  height: 400px;
+  max-width: 80vw;
+  max-height: 80vw;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: none;
 }
 
 .hero-svg {
