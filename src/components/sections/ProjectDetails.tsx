@@ -8,7 +8,7 @@ import './ProjectDetails.css';
 
 const ProjectDetails = () => {
     const { translationKey } = useParams<{ translationKey: string }>();
-    const { t } = useLanguage();
+    const { t, language } = useLanguage();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -49,13 +49,47 @@ const ProjectDetails = () => {
     const description = translatedDescription.startsWith('projects.')
         ? project.description
         : translatedDescription;
+    const translateDetail = (
+        field: string,
+        value: string,
+        index?: number
+    ) => language === 'en'
+        ? t(`projects.${projectDetail.translationKey}.detail.${field}${index === undefined ? '' : `.${index}`}`)
+        : value;
+    const detailSubtitle = translateDetail('subtitle', projectDetail.subtitle);
+    const detailPeriod = translateDetail('period', projectDetail.period);
+    const detailRole = translateDetail('role', projectDetail.role);
+    const detailTeam = projectDetail.team
+        ? translateDetail('team', projectDetail.team)
+        : undefined;
+    const detailContext = translateDetail('context', projectDetail.context);
+    const detailResponsibilities = projectDetail.responsibilities.map((item, index) =>
+        translateDetail('responsibility', item, index)
+    );
+    const detailResults = projectDetail.results.map((item, index) =>
+        translateDetail('result', item, index)
+    );
+    const detailArchitecture = projectDetail.architecture
+        ? translateDetail('architecture', projectDetail.architecture)
+        : undefined;
+    const detailSkills = projectDetail.skills.map((skill, index) =>
+        translateDetail('skill', skill, index)
+    );
+    const translateTechnology = (technology: string) => {
+        const technologyKeys: Record<string, string> = {
+            'APIs de IA de Google': 'projects.tech.googleAi',
+            'Arquitectura hexagonal': 'projects.tech.hexagonalArchitecture',
+        };
+        const key = technologyKeys[technology];
+        return language === 'en' && key ? t(key) : technology;
+    };
 
  return (
     <Container className="project-detail py-5 mt-5">
         <Link to="/" className="back-link">← {t('projects.backToProjects')}</Link>
 
         <h1 className="mt-2 mb-4">{title}</h1>
-        <p className="project-detail-subtitle">{projectDetail.subtitle}</p>
+        <p className="project-detail-subtitle">{detailSubtitle}</p>
 
         <Row className="project-detail-overview g-5 align-items-stretch">
             <Col lg={6}>
@@ -68,10 +102,10 @@ const ProjectDetails = () => {
 
             <Col lg={6}>
             <div className="project-detail-meta">
-                <p><strong>{t('projects.period')}:</strong> {projectDetail.period}</p>
-                <p><strong>{t('projects.role')}:</strong> {projectDetail.role}</p>
-                {projectDetail.team && (
-                    <p><strong>{t('projects.team')}:</strong> {projectDetail.team}</p>
+                <p><strong>{t('projects.period')}:</strong> {detailPeriod}</p>
+                <p><strong>{t('projects.role')}:</strong> {detailRole}</p>
+                {detailTeam && (
+                    <p><strong>{t('projects.team')}:</strong> {detailTeam}</p>
                 )}
                 <p>
                     <strong>{t('projects.status')}:</strong>{' '}
@@ -83,12 +117,12 @@ const ProjectDetails = () => {
 
             <h5>{t('projects.descriptionTitle')}</h5>
             <p className="project-detail-description">{description}</p>
-            <p className="project-detail-context">{projectDetail.context}</p>
+            <p className="project-detail-context">{detailContext}</p>
 
             <h5 className="mt-4">{t('projects.technologies')}</h5>
             <div className="project-technologies">
                 {projectDetail.techGroups.flatMap((group) => group.items).map((tech, i) => (
-                <span key={i} className="tech-badge">{tech}</span>
+                <span key={i} className="tech-badge">{translateTechnology(tech)}</span>
                 ))}
             </div>
             </Col>
@@ -99,7 +133,7 @@ const ProjectDetails = () => {
                 <div className="project-detail-panel">
                 <h5>{t('projects.responsibilities')}</h5>
                 <ul className="project-detail-list">
-                    {projectDetail.responsibilities.map((item) => <li key={item}>{item}</li>)}
+                    {detailResponsibilities.map((item) => <li key={item}>{item}</li>)}
                 </ul>
                 </div>
             </Col>
@@ -107,23 +141,23 @@ const ProjectDetails = () => {
                 <div className="project-detail-panel">
                 <h5>{t('projects.results')}</h5>
                 <ul className="project-detail-list">
-                    {projectDetail.results.map((item) => <li key={item}>{item}</li>)}
+                    {detailResults.map((item) => <li key={item}>{item}</li>)}
                 </ul>
                 </div>
             </Col>
         </Row>
 
-        {projectDetail.architecture && (
+        {detailArchitecture && (
             <section className="project-detail-section">
                 <h5>{t('projects.architecture')}</h5>
-                <p className="project-detail-description">{projectDetail.architecture}</p>
+                <p className="project-detail-description">{detailArchitecture}</p>
             </section>
         )}
 
         <section className="project-detail-section">
             <h5>{t('projects.skills')}</h5>
             <div className="project-technologies">
-                {projectDetail.skills.map((skill) => (
+                {detailSkills.map((skill) => (
                     <span key={skill} className="tech-badge">{skill}</span>
                 ))}
             </div>
@@ -133,7 +167,7 @@ const ProjectDetails = () => {
             <div className="project-detail-links">
                 {Object.entries(projectDetail.links).map(([label, url]) => url && (
                     <a key={label} href={url} target="_blank" rel="noopener noreferrer">
-                        {label}
+                        {t(`projects.link.${label}`)}
                     </a>
                 ))}
             </div>

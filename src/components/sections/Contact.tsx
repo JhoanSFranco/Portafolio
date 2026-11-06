@@ -68,12 +68,12 @@ const Contact = memo(() => {
               {/* Mensaje de estado */}
               {submitStatus === 'success' && (
                 <div className="alert alert-success" role="alert">
-                  {t('contact.success')}
+                  {t('contact.successMessage')}
                 </div>
               )}
               {submitStatus === 'error' && (
                 <div className="alert alert-danger" role="alert">
-                  {t('contact.error')}
+                  {t('contact.errorMessage')}
                 </div>
               )}
               
@@ -105,7 +105,7 @@ const Contact = memo(() => {
             </div>
             <div className="info-item mb-4">
               <h5 className="info-label">{t('contact.addressLabel')}</h5>
-              <p className="info-value">{personalInfo.location}</p>
+              <p className="info-value">{t('contact.location')}</p>
             </div>
             <div className="info-item mb-4">
               <h5 className="info-label">{t('contact.phoneLabel')}</h5>
