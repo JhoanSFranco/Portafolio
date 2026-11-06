@@ -36,6 +36,9 @@ export const technologies: Technology[] = [
   { name: 'TypeScript', icon: devicon('typescript/typescript-original.svg') },
   { name: 'C++', icon: devicon('cplusplus/cplusplus-original.svg') },
   { name: 'R', icon: devicon('r/r-original.svg') },
+  { name: 'Go', icon: devicon('go/go-original.svg') },
+  { name: 'Elixir', icon: devicon('elixir/elixir-original.svg') },
+
   // Backend & frontend
   { name: 'Spring Boot', icon: devicon('spring/spring-original.svg') },
   { name: 'FastAPI', icon: devicon('fastapi/fastapi-original.svg') },
@@ -48,6 +51,10 @@ export const technologies: Technology[] = [
   { name: 'MySQL', icon: devicon('mysql/mysql-original.svg') },
   { name: 'MongoDB', icon: devicon('mongodb/mongodb-original.svg') },
   { name: 'Redis', icon: devicon('redis/redis-original.svg') },
+  { name: 'Apache Spark', icon: devicon('apachespark/apachespark-original.svg') },
+  { name: 'Apache Flink', icon: 'https://cdn.simpleicons.org/apacheflink' },
+  { name: 'Apache Pulsar', icon: 'https://cdn.simpleicons.org/apachepulsar' },
+  // { name: 'Debezium', icon: 'https://cdn.simpleicons.org/debezium' },
   // Cloud & DevOps
   { name: 'Google Cloud Platform', icon: devicon('googlecloud/googlecloud-original.svg') },
   { name: 'Firebase', icon: devicon('firebase/firebase-plain.svg') },
