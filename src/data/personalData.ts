@@ -3,10 +3,10 @@ import { PersonalInfo, Project, ProjectDetail, Service, Technology, SocialLink }
 export const personalInfo: PersonalInfo = {
   name: 'Jhoan Sebastián Franco Ruiz',
   title: 'Software Engineer',
-  description: 'Soy un Desarrollador Fullstack (énfasis Backend). Actualmente trabajo en Nodi como Desarrollador de Software, especializado en el diseño y desarrollo de APIs REST con Python (FastAPI, Django REST Framework), bases de datos SQL y NoSQL y arquitectura de microservicios.',
+  description: 'Ingeniero full stack con énfasis en backend. Diseño APIs fiables, sistemas distribuidos y pipelines de datos en tiempo real, y me adapto rápido al stack que cada proyecto necesita.',
   location: 'Brest, France',
-  email: 'solosebax265@gmail.com',
-  phone: '+33 75 29 16 66 3',
+  email: 'solosebax265@gmail.com', // TODO: usar el mismo email que en el CV
+  phone: '+33 7 52 91 66 63',
   linkedin: 'https://www.linkedin.com/in/jhoan-sebastián-franco-46954b28a/',
   github: 'https://github.com/JhoanSFranco',
   resume_spanish: '/assets/resumes/CV_JHOAN_SEBASTIAN_FRANCO_SPANISH.pdf',
@@ -26,51 +26,56 @@ export const socialLinks: SocialLink[] = [
   }
 ];
 
-export const technologies: Technology[] = [
-  { name: 'Python', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
-  { name: 'JavaScript', icon:"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"},
-  { name: 'TypeScript', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
-  { name: 'Java', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
-  { name: 'C++', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
-  { name: 'R', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" },
-  { name: 'FastAPI', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" },
-  { name: 'Flask', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
-  { name: 'Django', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" },
-  { name: 'React', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
-  { name: 'HTML5', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
-  { name: 'CSS3', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
-  { name: 'Bootstrap', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-plain.svg" },
-  { name: 'PostgreSQL', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
-  { name: 'MySQL', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
-  { name: 'MongoDB', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
-  { name: 'Redis', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" },
-  { name: 'Docker', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
-  { name: 'Git', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
-  { name: 'Google Cloud Platform', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
-  { name: 'firebase', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg"},
-  { name: 'Arduino', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" },
-  { name: 'GitHub', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
-  { name: 'Selenium', icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg" },
+const devicon = (path: string) => `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${path}`;
 
+export const technologies: Technology[] = [
+  // Languages
+  { name: 'Java', icon: devicon('java/java-original.svg') },
+  { name: 'Python', icon: devicon('python/python-original.svg') },
+  { name: 'JavaScript', icon: devicon('javascript/javascript-original.svg') },
+  { name: 'TypeScript', icon: devicon('typescript/typescript-original.svg') },
+  { name: 'C++', icon: devicon('cplusplus/cplusplus-original.svg') },
+  { name: 'R', icon: devicon('r/r-original.svg') },
+  // Backend & frontend
+  { name: 'Spring Boot', icon: devicon('spring/spring-original.svg') },
+  { name: 'FastAPI', icon: devicon('fastapi/fastapi-original.svg') },
+  { name: 'Django', icon: devicon('django/django-plain.svg') },
+  { name: 'React', icon: devicon('react/react-original.svg') },
+  { name: 'HTML5', icon: devicon('html5/html5-original.svg') },
+  { name: 'CSS3', icon: devicon('css3/css3-original.svg') },
+  // Data
+  { name: 'PostgreSQL', icon: devicon('postgresql/postgresql-original.svg') },
+  { name: 'MySQL', icon: devicon('mysql/mysql-original.svg') },
+  { name: 'MongoDB', icon: devicon('mongodb/mongodb-original.svg') },
+  { name: 'Redis', icon: devicon('redis/redis-original.svg') },
+  // Cloud & DevOps
+  { name: 'Google Cloud Platform', icon: devicon('googlecloud/googlecloud-original.svg') },
+  { name: 'Firebase', icon: devicon('firebase/firebase-plain.svg') },
+  { name: 'Docker', icon: devicon('docker/docker-original.svg') },
+  { name: 'Kubernetes', icon: devicon('kubernetes/kubernetes-plain.svg') },
+  { name: 'GitHub Actions', icon: devicon('githubactions/githubactions-original.svg') },
+  { name: 'Grafana', icon: devicon('grafana/grafana-original.svg') },
+  { name: 'Git', icon: devicon('git/git-original.svg') },
+  { name: 'Selenium', icon: devicon('selenium/selenium-original.svg') },
 ];
 
 export const services: Service[] = [
   {
     id: 1,
-    title: 'Desarrollo Backend',
-    description: 'Diseño y desarrollo de APIs REST escalables con Python (FastAPI, Django), arquitectura de microservicios, integración con bases de datos SQL y NoSQL, y despliegue en la nube con GCP.',
+    title: 'Backend pensado para evolucionar',
+    description: 'Diseño APIs REST y servicios que mantienen la lógica de negocio independiente de frameworks e infraestructura (hexagonal, microservicios o un monolito bien estructurado, según lo que pida el contexto), para que los sistemas crezcan y cambien sin tener que reescribirse.',
     icon: 'server'
   },
   {
     id: 2,
-    title: 'Desarrollo Fullstack',
-    description: 'Desarrollo de aplicaciones web completas desde el backend hasta el frontend, integrando React con APIs REST, implementando lógica de negocio y procesos ETL.',
+    title: 'De principio a fin',
+    description: 'Llevo cada funcionalidad desde el modelo de datos hasta la API y la interfaz, y la entrego con CI/CD, contenedores y monitoreo. ¿Un stack nuevo? Me pongo al día rápido y me concentro en lo que el producto necesita.',
     icon: 'code'
   },
   {
     id: 3,
-    title: 'Bases de Datos e Integración',
-    description: 'Modelado y gestión de bases de datos relacionales y NoSQL, migraciones de datos, procesos ETL e integración entre servicios y APIs externas.',
+    title: 'Datos que fluyen con fiabilidad',
+    description: 'Migraciones, ETL/ELT y pipelines orientados a eventos diseñados para medirse: la fiabilidad, la escalabilidad y la latencia se prueban, nunca se suponen.',
     icon: 'database'
   }
 ];
@@ -80,26 +85,26 @@ export const projects: Project[] = [
     id: 1,
     title: 'Arquitectura CDC para integración de datos',
     icon: '/assets/images/imagen_proyecto_cdc.png',
-    description: 'Sept. 2026 - en curso. POC de arquitectura CDC en tiempo real para Clever Cloud: ingesta incremental de múltiples fuentes hacia un data warehouse con Debezium, Apache Pulsar y Apache Flink. Evaluación experimental de fiabilidad, escalabilidad y latencia del pipeline.',
-    technologies: ['Debezium', 'Apache Pulsar', 'Apache Flink', 'PostgreSQL', 'CDC', 'ETL/ELT', 'Data Engineering'],
+    description: 'Pipeline de Change Data Capture en tiempo real para Clever Cloud que transmite los cambios de varias fuentes PostgreSQL hacia un data warehouse con Debezium, Apache Pulsar y Apache Flink.',
+    technologies: ['Debezium', 'Apache Pulsar', 'Apache Flink', 'PostgreSQL', 'CDC', 'ETL/ELT'],
     link: '#',
     translationKey: 'cdc'
   },
   {
     id: 2,
-    title: 'Yunex Traffic - Módulo de mantenimiento ORION',
+    title: 'Módulo de mantenimiento ORION – Yunex Traffic',
     icon: '/assets/images/imagen_proyecto_orion.png',
-    description: 'Mar. - jul. 2026. Practicante full stack. Desarrollo del backend (Java, Spring Boot) y el frontend (React) de un módulo de mantenimiento integrado a ORION para el seguimiento de operaciones de campo: eventos, grupos e inventario de equipos de transporte inteligente. APIs REST y arquitectura hexagonal, con una solución pensada para comercializarse como producto.',
+    description: 'Módulo full stack de mantenimiento para la plataforma ORION de Yunex Traffic, usado por técnicos para el seguimiento de equipos ITS y construido con Spring Boot, React y arquitectura hexagonal.',
     technologies: ['Java', 'Spring Boot', 'React', 'REST', 'Arquitectura hexagonal'],
     link: '#',
     translationKey: 'orion'
   },
   {
     id: 3,
-    title: 'Nodi - Ingeniero de software',
+    title: 'Nodi – Migración cloud y servicios de IA',
     icon: '/assets/images/imagen_proyecto_nodi.png',
-    description: 'Ago. 2025 - feb. 2026. Startup en Bogotá. Migración de la base de datos a PostgreSQL en GCP, diseño de buckets en Google Cloud Storage para organizar CV, PDF e imágenes, y desarrollo de servicios backend en Python con FastAPI integrando las APIs de IA de Google.',
-    technologies: ['Python', 'FastAPI', 'REST', 'PostgreSQL', 'GCP', 'Cloud Storage', 'Firebase Auth', 'AI integration'],
+    description: 'Backend y cloud para una startup de reclutamiento: migración completa a PostgreSQL en GCP y servicios FastAPI que integran las APIs de IA de Google.',
+    technologies: ['Python', 'FastAPI', 'PostgreSQL', 'GCP', 'Cloud Storage', 'Firebase Auth', 'AI integration'],
     link: '#',
     translationKey: 'nodi'
   },
@@ -107,16 +112,16 @@ export const projects: Project[] = [
     id: 4,
     title: 'Sistema de Gestión Académica (SGA)',
     icon: '/assets/images/imagen_proyecto_sga.png',
-    description: 'May. - jul. 2025. MVP web desarrollado en equipo de 7 para el Colegio Josué Manrique, que reemplaza un proceso en Access/Excel: preinscripción con PDF, autenticación por roles y seguimiento de notas y asistencia. Arquitectura SOFEA con microservicios, CI/CD con GitHub Actions, Docker y monitoreo con Prometheus y Grafana.',
-    technologies: ['Python', 'FastAPI', 'REST', 'React', 'MongoDB', 'MySQL', 'Docker', 'GitHub Actions', 'Prometheus', 'Grafana', 'Selenium'],
+    description: 'Plataforma web que reemplaza el proceso en Access/Excel de un colegio, desarrollada por un equipo de 7 con microservicios FastAPI y React, CI/CD y monitoreo.',
+    technologies: ['FastAPI', 'React', 'MongoDB', 'MySQL', 'Docker', 'GitHub Actions', 'Prometheus', 'Grafana'],
     link: '#',
     translationKey: 'sga'
   },
   {
     id: 5,
-    title: 'Monitor de programación - Universidad Nacional de Colombia',
+    title: 'Monitor de C++ – Universidad Nacional de Colombia',
     icon: '/assets/images/imagen_proyecto_monitoria.png',
-    description: 'Feb. - may. y jul. - sept. 2025. Acompañamiento de más de 100 estudiantes de programación en C++ (2 h al día, 2 días por semana) en un equipo de 3 monitores: corrección de ejercicios y consolidación de los conceptos fundamentales.',
+    description: 'Acompañamiento de más de 100 estudiantes de programación en C++ dentro de un equipo de tres monitores.',
     technologies: ['C++', 'Enseñanza', 'Comunicación', 'Trabajo en equipo'],
     link: '#',
     translationKey: 'monitoria'
@@ -127,27 +132,27 @@ export const projectDetails: ProjectDetail[] = [
   {
     id: 3,
     translationKey: 'nodi',
-    title: 'Nodi - Ingeniero de software',
-    subtitle: 'Backend, migración cloud e integración de IA en una startup',
+    title: 'Nodi – Migración cloud y servicios de IA',
+    subtitle: 'Servicios backend, migración cloud e integración de IA para una plataforma de reclutamiento',
     period: 'Ago. 2025 - Feb. 2026',
     role: 'Ingeniero de software (backend / cloud)',
-    team: 'Startup de 7 personas en Bogotá; dailies con todo el equipo y gestión horizontal',
+    team: 'Startup de siete personas en Bogotá, con dailies y una estructura horizontal',
     status: 'completed',
     context:
-      'Nodi es una startup donde el backend y el cloud están en el centro del producto. Mi trabajo se centró en la plataforma de reclutamiento: APIs, datos y servicios de IA.',
+      'Nodi desarrolla una plataforma de reclutamiento en la que el backend y el cloud son el centro del producto. El reto era llevar la plataforma a una base cloud más sólida (datos, archivos y autenticación) sin dejar de entregar nuevas funcionalidades, incluidas las basadas en IA.',
     responsibilities: [
-      'Desarrollar APIs REST escalables con Python y FastAPI según la lógica de negocio.',
-      'Migrar la base de datos Supabase a PostgreSQL en GCP para reforzar la arquitectura cloud.', // TODO: confirmar origen (Supabase o Sybase)
-      'Diseñar la estructura de buckets en Google Cloud Storage para organizar CV, PDF e imágenes.',
-      'Integrar las APIs de IA de Google para enriquecer las funcionalidades de las aplicaciones.',
-      'Migrar la autenticación y la base de usuarios a Firebase Authentication.',
-      'Participar en procesos ETL e integrar el frontend con React.',
+      'Construí APIs REST escalables en Python con FastAPI, traduciendo los requisitos de negocio en lógica de servicio limpia.',
+      'Migré toda la base de datos de Supabase a PostgreSQL en GCP.', // TODO: confirmar origen (Supabase o Sybase)
+      'Diseñé la estructura de buckets en Google Cloud Storage para CV, PDF e imágenes, separando los archivos no estructurados de los datos relacionales.',
+      'Integré las APIs de IA de Google en los servicios backend para habilitar nuevas funcionalidades.',
+      'Migré la autenticación y la base de usuarios a Firebase Authentication.',
+      'Participé en procesos ETL y conecté los servicios backend con el frontend en React.',
     ],
     results: [
-      'Base de datos migrada a PostgreSQL en GCP con una arquitectura cloud más sólida.',
-      'Objetos no estructurados (CV, PDF, imágenes) organizados en buckets.',
-      'Aplicaciones enriquecidas con funcionalidades de IA.',
-      'Autenticación centralizada con Firebase Authentication.',
+      'Capa de datos en PostgreSQL sobre GCP, con una arquitectura cloud más sólida y escalable.',
+      'Archivos no estructurados organizados en una estructura de buckets clara y mantenible.',
+      'Funcionalidades de IA integradas al producto mediante servicios backend.',
+      'Autenticación centralizada con Firebase.',
     ],
     techGroups: [
       { label: 'Backend', items: ['Python', 'FastAPI', 'REST'] },
@@ -155,33 +160,33 @@ export const projectDetails: ProjectDetail[] = [
       { label: 'Cloud', items: ['GCP', 'Cloud Storage', 'Firebase Auth', 'APIs de IA de Google', 'Docker'] },
       { label: 'Frontend', items: ['React', 'TypeScript'] },
     ],
-    skills: ['Autonomía', 'Polivalencia', 'Iniciativa', 'Adaptación en entorno startup'],
+    skills: ['Autonomía', 'Polivalencia', 'Iniciativa', 'Adaptación rápida en startup'],
   },
   {
     id: 4,
     translationKey: 'sga',
     title: 'Sistema de Gestión Académica (SGA)',
-    subtitle: 'MVP para reemplazar un proceso manual en Access/Excel',
-    period: '2025', // TODO: confirmar (CV: may-jul 2025 / bucket: feb-jun 2025)
+    subtitle: 'Una plataforma web que reemplaza el proceso manual en Access/Excel de un colegio',
+    period: 'May. - Jul. 2025', // TODO: confirmar (CV: may-jul 2025 / bucket: feb-jun 2025)
     role: 'Desarrollador backend y full stack',
     team: 'Equipo de 7 personas',
     status: 'completed',
     context:
-      'El Colegio Josué Manrique gestionaba preinscripciones, notas y asistencia con un proceso manual en Access y Excel. Desarrollamos un MVP web que lo reemplaza, con un impacto social directo.',
+      'El Colegio Josué Manrique gestionaba preinscripciones, notas y asistencia de forma manual en Access y Excel. El reto era reemplazar ese proceso por una aplicación web en la que el colegio pudiera confiar y que pudiera mantener, desarrollada por un equipo de siete personas en un solo periodo académico.',
     responsibilities: [
-      'Desarrollar con FastAPI los módulos de preinscripción (con PDF), autenticación por roles y administración.',
-      'Implementar el seguimiento de notas y asistencia.',
-      'Aplicar la arquitectura SOFEA con microservicios para separar la interfaz de los servicios backend.',
-      'Montar CI/CD con GitHub Actions, contenedores con Docker y monitoreo con Prometheus y Grafana.',
-      'Escribir pruebas automatizadas con Selenium.',
-      'Documentar el proceso en un artículo de Medium.',
+      'Construí con FastAPI los módulos de preinscripción (con generación de PDF), autenticación por roles y administración.',
+      'Implementé el seguimiento de notas y asistencia.',
+      'Apliqué una arquitectura SOFEA con microservicios para desacoplar la interfaz de los servicios backend.',
+      'Monté CI/CD con GitHub Actions, contenedores con Docker y monitoreo con Prometheus y Grafana.',
+      'Escribí pruebas automatizadas de extremo a extremo con Selenium.',
+      'Documenté el proyecto y su proceso de ingeniería en un artículo de Medium.',
     ],
     results: [
-      'MVP entregado que reemplaza el proceso Access/Excel.',
-      'Código modular que mejora el mantenimiento y acelera las entregas.',
-      'Proceso compartido públicamente mediante un artículo en Medium.',
+      'MVP entregado que reemplaza el proceso en Access/Excel del colegio.',
+      'Código modular y probado, más fácil de mantener y extender.',
+      'Proceso de ingeniería compartido públicamente en un artículo de Medium.',
     ],
-    architecture: 'SOFEA: frontend React desacoplado de microservicios FastAPI con MongoDB y una base relacional.',
+    architecture: 'SOFEA: frontend React desacoplado de microservicios FastAPI con MongoDB y una base relacional, en contenedores Docker y monitoreado con Prometheus y Grafana.',
     techGroups: [
       { label: 'Backend', items: ['Python', 'FastAPI', 'REST'] },
       { label: 'Datos', items: ['PostgreSQL', 'MongoDB'] }, // TODO: el CV menciona MySQL, confirma
@@ -194,26 +199,26 @@ export const projectDetails: ProjectDetail[] = [
   {
     id: 2,
     translationKey: 'orion',
-    title: 'ORION - Módulo de mantenimiento (Yunex Traffic)',
-    subtitle: 'Mantenimiento de dispositivos de transporte inteligente (ITS)',
+    title: 'Módulo de mantenimiento ORION – Yunex Traffic',
+    subtitle: 'Gestión del mantenimiento de equipos de sistemas de transporte inteligente (ITS)',
     period: 'Mar. - Jul. 2026',
     role: 'Practicante de ingeniería de software full stack',
-    team: 'Equipo ORION de 6 desarrolladores, Bogotá',
+    team: 'Equipo ORION de seis desarrolladores, Bogotá',
     status: 'completed',
     context:
-      'ORION es la solución interna de Yunex Traffic para el seguimiento de operaciones de campo. Mi módulo cubre el mantenimiento de equipos ITS para los técnicos.',
+      'ORION es la plataforma de Yunex Traffic para el seguimiento de operaciones de campo. Construí el módulo que usan los técnicos para gestionar el mantenimiento de los equipos ITS. El reto era integrarme limpiamente a un código y a un dominio de negocio ya existentes, diseñando el módulo para que pudiera convertirse en un producto comercial y no solo en una herramienta interna.',
     responsibilities: [
-      'Desarrollar el backend (Java, Spring Boot) y el frontend (React) de los módulos de eventos, grupos e inventario.',
-      'Estructurar el código con arquitectura hexagonal para separar la lógica de negocio de los adaptadores técnicos.',
-      'Exponer y consumir APIs REST para integrar los módulos en ORION.',
-      'Adaptarme a un proyecto y a un contexto de negocio ya existentes.',
+      'Construí el backend (Java, Spring Boot) y el frontend (React) de los módulos de eventos, grupos e inventario.',
+      'Estructuré el código con arquitectura hexagonal, aislando la lógica de negocio de los adaptadores técnicos.',
+      'Expuse y consumí APIs REST para integrar los módulos en ORION.',
+      'Me puse al día rápidamente con un código existente y un dominio de negocio nuevo para mí.',
     ],
     results: [
       'Módulos de eventos, grupos e inventario integrados en ORION y usados por los técnicos.',
       'Mejor trazabilidad del inventario de equipos.',
-      'Solución pensada para evolucionar hacia un producto comercializable, más allá del uso interno.',
+      'Una arquitectura lista para evolucionar hacia un producto comercial, más allá del uso interno.',
     ],
-    architecture: 'Arquitectura hexagonal: dominio aislado, puertos y adaptadores REST/persistencia.',
+    architecture: 'Arquitectura hexagonal: núcleo de dominio aislado, con puertos y adaptadores para REST y persistencia.',
     techGroups: [
       { label: 'Backend', items: ['Java', 'Spring Boot', 'REST', 'Arquitectura hexagonal'] },
       { label: 'Frontend', items: ['React'] },
@@ -224,23 +229,23 @@ export const projectDetails: ProjectDetail[] = [
     id: 1,
     translationKey: 'cdc',
     title: 'Arquitectura CDC para integración de datos',
-    subtitle: 'POC de ingesta incremental en tiempo real para Clever Cloud',
+    subtitle: 'Ingesta incremental de datos en tiempo real para Clever Cloud',
     period: 'Sept. 2026 - en curso',
-    role: 'Diseño del POC y evaluación experimental',
+    role: 'Diseño de la arquitectura y evaluación experimental',
     status: 'in-progress',
     context:
-      'Clever Cloud necesita ingerir datos de forma incremental desde varias bases de origen hacia un data warehouse, con aislamiento por cliente.',
+      'Clever Cloud necesita ingerir datos de forma incremental desde varias bases de origen hacia un data warehouse, manteniendo aislados los datos de cada cliente. El reto es capturar cada cambio casi en tiempo real, procesarlo entre fuentes y demostrar con mediciones que el pipeline sigue siendo fiable a medida que crece la carga.',
     responsibilities: [
-      'Capturar cambios del WAL de tres bases PostgreSQL simuladas con dbgen mediante Debezium, filtrando archivos pesados.',
-      'Transportar los eventos con Apache Pulsar, aislados por cliente (multi-tenant).',
-      'Realizar joins y agregaciones con Apache Flink antes de cargar en una base analítica PostgreSQL.',
-      'Probar el pipeline en cuatro escenarios: carga inicial, adición incremental, detección de cambios y CDC continuo.',
-      'Evaluar experimentalmente fiabilidad, escalabilidad y latencia.',
+      'Capturé los cambios del write-ahead log (WAL) de tres bases PostgreSQL pobladas con dbgen, usando Debezium y filtrando los archivos pesados.',
+      'Transporté los eventos con Apache Pulsar, con aislamiento por cliente (multi-tenant).',
+      'Implementé joins y agregaciones en Apache Flink antes de cargar una base analítica PostgreSQL.',
+      'Probé el pipeline en cuatro escenarios: carga inicial, inserciones incrementales, detección de cambios y CDC continuo.',
+      'Diseñé experimentos para medir fiabilidad, escalabilidad y latencia.',
     ],
     results: [
-      'La evaluación experimental valida la fiabilidad, la escalabilidad y la reducción de latencia del pipeline (proyecto en curso).',
+      'Los primeros resultados apuntan a un pipeline fiable, escalable y con menor latencia; la evaluación completa está en curso.',
     ],
-    architecture: 'PostgreSQL (WAL) -> Debezium -> Apache Pulsar (multi-tenant) -> Apache Flink -> PostgreSQL analítico.',
+    architecture: 'PostgreSQL (WAL) → Debezium → Apache Pulsar (multi-tenant) → Apache Flink → PostgreSQL analítico.',
     techGroups: [
       { label: 'Captura y transporte', items: ['Debezium', 'Apache Pulsar'] },
       { label: 'Procesamiento', items: ['Apache Flink', 'ETL/ELT'] },
@@ -251,22 +256,22 @@ export const projectDetails: ProjectDetail[] = [
   {
     id: 5,
     translationKey: 'monitoria',
-    title: 'Monitor de programación - Universidad Nacional de Colombia',
+    title: 'Monitor de C++ – Universidad Nacional de Colombia',
     subtitle: 'Acompañamiento académico en programación C++',
-    period: 'Feb. - may. y jul. - sept. 2025',
+    period: 'Feb. - May. y Jul. - Sept. 2025',
     role: 'Monitor de programación',
     team: 'Equipo de 3 monitores',
     status: 'completed',
     context:
-      'Acompañamiento de más de 100 estudiantes de programación en C++ durante dos horas al día, dos días por semana.',
+      'Acompañé a más de 100 estudiantes de un curso de programación en C++, dos horas al día, dos días por semana. El reto era convertir conceptos abstractos en algo que los estudiantes pudieran aplicar por su cuenta.',
     responsibilities: [
-      'Corregir ejercicios de programación en C++.',
-      'Acompañar a los estudiantes en la resolución de problemas.',
-      'Consolidar los conceptos fundamentales de programación.',
+      'Corregí ejercicios de C++ y di retroalimentación concreta a los estudiantes.',
+      'Ayudé a los estudiantes a resolver problemas paso a paso.',
+      'Reforcé los conceptos fundamentales de programación.',
     ],
     results: [
-      'Más de 100 estudiantes acompañados durante el periodo académico.',
-      'Refuerzo de conceptos fundamentales mediante seguimiento y retroalimentación.',
+      'Más de 100 estudiantes acompañados durante dos periodos académicos.',
+      'Mejor dominio de los fundamentos gracias al seguimiento y la retroalimentación constantes.',
     ],
     techGroups: [
       { label: 'Programación', items: ['C++'] },
