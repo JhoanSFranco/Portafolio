@@ -11,7 +11,7 @@ Portafolio web personal desarrollado con React + TypeScript + Vite.
 ## 📋 Características
 
 - Diseño responsive y moderno
-- Soporte multiidioma (ES/EN)
+- Soporte multiidioma (ES/EN/FR)
 - Formulario de contacto con envío automático y confirmación
 - Navegación suave entre secciones
 - CV descargable según idioma

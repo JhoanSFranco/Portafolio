@@ -10,7 +10,7 @@ import './Header.css';
 
 const Header = memo(() => {
   const scrolled = useScroll();
-  const { language, toggleLanguage } = useLanguage();
+  const { nextLanguage, toggleLanguage } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Prevenir scroll del body cuando el menú móvil está abierto
@@ -53,7 +53,7 @@ const Header = memo(() => {
               className="language-btn ms-2"
               aria-label="Toggle language"
             >
-              {language === 'es' ? 'EN' : 'ES'}
+              {nextLanguage.toUpperCase()}
             </Button>
           </div>
         </Navbar.Collapse>

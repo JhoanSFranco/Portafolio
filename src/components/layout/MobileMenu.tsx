@@ -13,7 +13,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = memo(({ isOpen, onClose }: MobileMenuProps) => {
-  const { t, language, toggleLanguage } = useLanguage();
+  const { t, nextLanguage, toggleLanguage } = useLanguage();
   const { handleNavClick } = useSmoothScroll();
 
   const location = useLocation();
@@ -82,7 +82,7 @@ const MobileMenu = memo(({ isOpen, onClose }: MobileMenuProps) => {
               className="mobile-menu-link language-toggle-btn"
               aria-label="Toggle language"
             >
-              {language === 'es' ? 'EN' : 'ES'}
+              {nextLanguage.toUpperCase()}
             </button>
           </li>
         </ul>

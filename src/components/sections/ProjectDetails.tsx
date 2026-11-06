@@ -54,7 +54,7 @@ const ProjectDetails = () => {
         field: string,
         value: string,
         index?: number
-    ) => language === 'en'
+    ) => language !== 'es'
         ? t(`projects.${projectDetail.translationKey}.detail.${field}${index === undefined ? '' : `.${index}`}`)
         : value;
     const detailSubtitle = translateDetail('subtitle', projectDetail.subtitle);

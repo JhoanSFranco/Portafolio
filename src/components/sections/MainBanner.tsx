@@ -52,7 +52,7 @@ const MainBanner = memo(() => {
             <div className="illustration-container">
               <img
                 // src="public\assets\images\Fondo_minimalista_sin_Fondo.png"
-                src="/assets/images/Gemini_Generated_Image_bl10nmbl10nmbl10.png"
+                src="/assets/images/imagen_jhoan_sin_fondo.png"
                 alt="Hero Illustration"
                 className="hero-photo"
               />
