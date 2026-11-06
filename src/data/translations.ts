@@ -63,6 +63,12 @@ export const translations: Record<Language, Record<string, string>> = {
     'projects.link.github': 'GitHub',
     'projects.link.article': 'Artículo',
     'projects.link.demo': 'Demo',
+    'projects.tech.googleAi': 'APIs de IA de Google',
+    'projects.tech.hexagonalArchitecture': 'Arquitectura hexagonal',
+    'projects.tech.aiIntegration': 'Integración de IA',
+    'projects.tech.teaching': 'Enseñanza',
+    'projects.tech.communication': 'Comunicación',
+    'projects.tech.teamwork': 'Trabajo en equipo',
     'projects.cdc.title': 'Arquitectura CDC para integración de datos',
     'projects.cdc.description': 'Pipeline de Change Data Capture en tiempo real para Clever Cloud que transmite los cambios de varias fuentes PostgreSQL hacia un data warehouse con Debezium, Apache Pulsar y Apache Flink.',
     'projects.orion.title': 'Módulo de mantenimiento ORION – Yunex Traffic',
@@ -166,6 +172,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'projects.link.demo': 'Demo',
     'projects.tech.googleAi': 'Google AI APIs',
     'projects.tech.hexagonalArchitecture': 'Hexagonal architecture',
+    'projects.tech.aiIntegration': 'AI integration',
+    'projects.tech.teaching': 'Teaching',
+    'projects.tech.communication': 'Communication',
+    'projects.tech.teamwork': 'Teamwork',
 
     // Project cards (summary level)
     'projects.cdc.title': 'CDC Architecture for Data Integration',

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
+import { translateTech } from '../../utils/helpers';
 import { projectDetails, projects } from '../../data/personalData';
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from '../common/Button';
@@ -75,14 +76,6 @@ const ProjectDetails = () => {
     const detailSkills = projectDetail.skills.map((skill, index) =>
         translateDetail('skill', skill, index)
     );
-    const translateTechnology = (technology: string) => {
-        const technologyKeys: Record<string, string> = {
-            'APIs de IA de Google': 'projects.tech.googleAi',
-            'Arquitectura hexagonal': 'projects.tech.hexagonalArchitecture',
-        };
-        const key = technologyKeys[technology];
-        return language === 'en' && key ? t(key) : technology;
-    };
 
  return (
     <Container className="project-detail py-5 mt-5">
@@ -122,7 +115,7 @@ const ProjectDetails = () => {
             <h5 className="mt-4">{t('projects.technologies')}</h5>
             <div className="project-technologies">
                 {projectDetail.techGroups.flatMap((group) => group.items).map((tech, i) => (
-                <span key={i} className="tech-badge">{translateTechnology(tech)}</span>
+                <span key={i} className="tech-badge">{translateTech(tech, t)}</span>
                 ))}
             </div>
             </Col>

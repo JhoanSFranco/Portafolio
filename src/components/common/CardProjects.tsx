@@ -2,7 +2,7 @@ import { memo, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Button }  from 'react-bootstrap';
 import { Project } from '../../types';
-import { openInNewTab } from '../../utils/helpers';
+import { openInNewTab, translateTech } from '../../utils/helpers';
 import { useLanguage } from '../../context/LanguageContext';
 import { useNavigate } from 'react-router-dom';
 import './CardProjects.css';
@@ -72,7 +72,7 @@ const CardProjects = memo(({
           <div className="project-technologies mb-3">
             {project.technologies.map((tech, index) => (
               <span key={index} className="tech-badge">
-                {tech}
+                {translateTech(tech, t)}
               </span>
             ))}
           </div>

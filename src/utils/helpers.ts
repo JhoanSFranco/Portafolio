@@ -44,3 +44,21 @@ export const formatPhoneForTel = (phone: string): string => {
   return phone.replace(/\s/g, '');
 };
 
+
+/**
+ * Maps non-proper-noun badges (skills, concepts) to translation keys.
+ * Technology names (React, Docker...) are not listed and stay as-is.
+ */
+const TECH_TRANSLATION_KEYS: Record<string, string> = {
+  'APIs de IA de Google': 'projects.tech.googleAi',
+  'Arquitectura hexagonal': 'projects.tech.hexagonalArchitecture',
+  'AI integration': 'projects.tech.aiIntegration',
+  'Enseñanza': 'projects.tech.teaching',
+  'Comunicación': 'projects.tech.communication',
+  'Trabajo en equipo': 'projects.tech.teamwork',
+};
+
+export const translateTech = (tech: string, t: (key: string) => string): string => {
+  const key = TECH_TRANSLATION_KEYS[tech];
+  return key ? t(key) : tech;
+};
