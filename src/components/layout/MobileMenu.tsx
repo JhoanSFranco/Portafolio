@@ -3,6 +3,9 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useSmoothScroll } from '../../hooks/useSmoothScroll';
 import { NAVIGATION_ITEMS } from '../../constants';
 import './MobileMenu.css';
+import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -13,10 +16,24 @@ const MobileMenu = memo(({ isOpen, onClose }: MobileMenuProps) => {
   const { t, language, toggleLanguage } = useLanguage();
   const { handleNavClick } = useSmoothScroll();
 
-  const handleItemClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    handleNavClick(e, targetId);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === '/';
+  
+
+  const onItemClick = (e: React.MouseEvent<HTMLElement>, id: string) => {
+    e.preventDefault();
+
+    // Close first: while open, body has `menu-open` which blocks scrolling
     onClose();
-  };
+
+    if (isHome) {
+      // Wait for the body scroll lock to be removed before scrolling
+      setTimeout(() => handleNavClick(e as any, id), 50);
+    } else {
+      navigate(`/#${id}`);
+    }
+  }
 
   return (
     <>
@@ -52,7 +69,7 @@ const MobileMenu = memo(({ isOpen, onClose }: MobileMenuProps) => {
             <li key={item.id} className="mobile-menu-item">
               <a
                 href={`#${item.id}`}
-                onClick={(e) => handleItemClick(e as any, item.id)}
+                onClick={(e) => onItemClick(e as any, item.id)}
                 className="mobile-menu-link"
               >
                 {t(item.key)}

@@ -13,7 +13,8 @@ export const useSmoothScroll = () => {
     (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
       e.preventDefault();
       handleScrollTo(targetId);
-      window.location.hash = `#${targetId}`; // <-- añade esta línea
+      // Update the URL without triggering a second (competing) native jump
+      window.history.replaceState(null, '', `#${targetId}`);
     },
     [handleScrollTo]
   );

@@ -1,4 +1,6 @@
-import {Routes, Route} from 'react-router-dom';
+import { useEffect } from 'react';
+import {Routes, Route, useLocation} from 'react-router-dom';
+import { scrollToElement } from './utils/helpers';
 import  {LanguageProvider} from './context/LanguageContext';
 import Header from './components/layout/Header';
 import MainBanner from './components/sections/MainBanner';
@@ -12,6 +14,16 @@ import ProjectDetails from './components/sections/ProjectDetails';
 
 
 function Home() {
+  const { hash } = useLocation();
+
+  // When arriving from another route (e.g. /projects/x -> /#contact), scroll to the section
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.slice(1);
+    const timer = setTimeout(() => scrollToElement(id), 50);
+    return () => clearTimeout(timer);
+  }, [hash]);
+
   return (
     <>
     <MainBanner />

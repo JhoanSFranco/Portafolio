@@ -20,6 +20,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keep section titles from hiding behind the fixed navbar */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
