@@ -1,3 +1,5 @@
+import { Language } from '../types';
+
 // Navigation constants
 export const NAVIGATION_ITEMS = [
   { id: 'home', key: 'nav.home' },
@@ -6,6 +8,17 @@ export const NAVIGATION_ITEMS = [
   { id: 'projects', key: 'nav.projects' },
   { id: 'contact', key: 'nav.contact' },
 ] as const;
+
+export const LANGUAGE_OPTIONS: Array<{
+  value: Language;
+  code: string;
+  label: string;
+  flag: string;
+}> = [
+  { value: 'en', code: 'EN', label: 'English', flag: '🇺🇸' },
+  { value: 'fr', code: 'FR', label: 'Français', flag: '🇫🇷' },
+  { value: 'es', code: 'ES', label: 'Español', flag: '🇪🇸' },
+];
 
 // Scroll threshold
 export const SCROLL_THRESHOLD = 50;
@@ -23,4 +36,3 @@ export const CONTACT_SUBJECTS = {
   es: 'Contacto desde portafolio',
   en: 'Contact from portfolio',
 } as const;
-

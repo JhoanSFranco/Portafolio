@@ -4,17 +4,9 @@ import { translations } from '../data/translations';
 
 interface LanguageContextType {
   language: Language;
-  nextLanguage: Language;
-  toggleLanguage: () => void;
+  changeLanguage: (language: Language) => void;
   t: (key: string) => string;
 }
-
-// Cycle order for the language toggle: EN → FR → ES → EN
-const NEXT_LANGUAGE: Record<Language, Language> = {
-  en: 'fr',
-  fr: 'es',
-  es: 'en',
-};
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -34,10 +26,8 @@ interface LanguageProviderProps {
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const [language, setLanguage] = useState<Language>('en');
 
-  const nextLanguage = NEXT_LANGUAGE[language];
-
-  const toggleLanguage = useCallback(() => {
-    setLanguage((prev) => NEXT_LANGUAGE[prev]);
+  const changeLanguage = useCallback((nextLanguage: Language) => {
+    setLanguage(nextLanguage);
   }, []);
 
   const t = useCallback(
@@ -51,11 +41,10 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const value = useMemo(
     () => ({
       language,
-      nextLanguage,
-      toggleLanguage,
+      changeLanguage,
       t,
     }),
-    [language, nextLanguage, toggleLanguage, t]
+    [language, changeLanguage, t]
   );
 
   return (
@@ -64,4 +53,3 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     </LanguageContext.Provider>
   );
 };
-

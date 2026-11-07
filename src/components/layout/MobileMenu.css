@@ -145,17 +145,8 @@
   animation-delay: 0.3s;
 }
 
-.language-toggle-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 1.25rem 1.5rem;
-  width: 100%;
-  text-align: left;
-  color: var(--primary-color);
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+.language-menu-item {
+  padding: 1rem 1.5rem;
 }
 
 
@@ -172,4 +163,3 @@ body.menu-open {
   position: fixed;
   width: 100%;
 }
-

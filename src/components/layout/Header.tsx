@@ -1,16 +1,14 @@
 import { memo, useState, useEffect } from 'react';
 import { Navbar} from 'react-bootstrap';
 import Container from '../common/Container';
-import Button  from '../common/Button';
-import { useLanguage } from '../../context/LanguageContext';
 import { useScroll } from '../../hooks/useScroll';
 import Navigation from './Navigation';
 import MobileMenu from './MobileMenu';
+import LanguageSelector from './LanguageSelector';
 import './Header.css';
 
 const Header = memo(() => {
   const scrolled = useScroll();
-  const { nextLanguage, toggleLanguage } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Prevenir scroll del body cuando el menú móvil está abierto
@@ -46,15 +44,7 @@ const Header = memo(() => {
         <Navbar.Collapse id="basic-navbar-nav" className="desktop-nav">
           <div className="d-flex align-items-center">
             <Navigation />
-            <Button
-              variant="outline-primary"
-              size="sm"
-              onClick={toggleLanguage}
-              className="language-btn ms-2"
-              aria-label="Toggle language"
-            >
-              {nextLanguage.toUpperCase()}
-            </Button>
+            <LanguageSelector />
           </div>
         </Navbar.Collapse>
       </Container>
@@ -69,4 +59,3 @@ const Header = memo(() => {
 Header.displayName = 'Header';
 
 export default Header;
-

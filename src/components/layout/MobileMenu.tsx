@@ -5,6 +5,7 @@ import { NAVIGATION_ITEMS } from '../../constants';
 import './MobileMenu.css';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import LanguageSelector from './LanguageSelector';
 
 
 interface MobileMenuProps {
@@ -13,7 +14,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = memo(({ isOpen, onClose }: MobileMenuProps) => {
-  const { t, nextLanguage, toggleLanguage } = useLanguage();
+  const { t } = useLanguage();
   const { handleNavClick } = useSmoothScroll();
 
   const location = useLocation();
@@ -76,14 +77,8 @@ const MobileMenu = memo(({ isOpen, onClose }: MobileMenuProps) => {
               </a>
             </li>
           ))}
-          <li className="mobile-menu-item">
-            <button
-              onClick={() => { toggleLanguage(); onClose(); }}
-              className="mobile-menu-link language-toggle-btn"
-              aria-label="Toggle language"
-            >
-              {nextLanguage.toUpperCase()}
-            </button>
+          <li className="mobile-menu-item language-menu-item">
+            <LanguageSelector onChange={onClose} />
           </li>
         </ul>
       </nav>
@@ -94,4 +89,3 @@ const MobileMenu = memo(({ isOpen, onClose }: MobileMenuProps) => {
 MobileMenu.displayName = 'MobileMenu';
 
 export default MobileMenu;
-
