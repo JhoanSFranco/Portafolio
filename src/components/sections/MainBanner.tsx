@@ -14,7 +14,12 @@ const MainBanner = memo(() => {
   const { t, language } = useLanguage();
 
   const handleResumeClick = useCallback(() => {
-    const resumeUrl = language === 'es' ? personalInfo.resume_spanish : personalInfo.resume_english;
+    const resumeUrl =
+      language === 'es'
+        ? personalInfo.resume_spanish
+        : language === 'fr'
+          ? personalInfo.resume_francais
+          : personalInfo.resume_english;
     openInNewTab(resumeUrl);
   }, [language]);
 

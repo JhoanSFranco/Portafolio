@@ -59,5 +59,6 @@ export interface PersonalInfo {
   github: string;
   resume_spanish: string;
   resume_english: string;
+  resume_francais: string;
 }
 
