@@ -1,6 +1,6 @@
 import { memo, useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { Button }  from 'react-bootstrap';
+import Button from './Button';
 import { Project } from '../../types';
 import { openInNewTab, translateTech } from '../../utils/helpers';
 import { useLanguage } from '../../context/LanguageContext';

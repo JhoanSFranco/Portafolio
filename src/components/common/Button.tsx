@@ -2,6 +2,9 @@ import { memo } from 'react';
 import { Button as BootstrapButton, ButtonProps } from 'react-bootstrap';
 import './Button.css';
 
+// BootstrapButton is polymorphic (`as` prop); narrowing it avoids TS2590
+const BsButton = BootstrapButton as React.ComponentType<ButtonProps>;
+
 interface CustomButtonProps extends Omit<ButtonProps, 'variant' | 'size'> {
   variant?: 'primary' | 'secondary' | 'outline-primary' | 'outline-secondary';
   size?: 'sm' | 'lg';
@@ -17,14 +20,14 @@ const Button = memo(({
   ...props 
 }: CustomButtonProps) => {
   return (
-    <BootstrapButton
+    <BsButton
+      {...props}
       variant={variant}
       size={size}
       className={`custom-button ${className}`}
-      {...props as any}
     >
       {children}
-    </BootstrapButton>
+    </BsButton>
   );
 });
 
